@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Mehdi Masmoudi | Full Stack Developer</title>
+    <meta name="description" content="Blog de Mehdi Masmoudi, Full Stack Developer partageant ses connaissances sur JavaScript, TypeScript, React, Node.js et l'automatisation">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="Blog, Mehdi Masmoudi, JavaScript, TypeScript, React, Node.js, Data, Automation">
+    <meta name="author" content="Mehdi Masmoudi">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mehdl.masmoudi.com/blog/">
+    <meta property="og:title" content="Blog - Mehdi Masmoudi | Full Stack Developer">
+    <meta property="og:description" content="Blog de Mehdi Masmoudi, Full Stack Developer partageant ses connaissances sur JavaScript, TypeScript, React, Node.js et l'automatisation">
+    <meta property="og:image" content="../images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.mehdl.masmoudi.com/blog/">
+    <meta property="twitter:title" content="Blog - Mehdi Masmoudi | Full Stack Developer">
+    <meta property="twitter:description" content="Blog de Mehdi Masmoudi, Full Stack Developer partageant ses connaissances sur JavaScript, TypeScript, React, Node.js et l'automatisation">
+    <meta property="twitter:image" content="../images/og-image.jpg">
+    
+    <!-- Cache Control -->
+    <meta http-equiv="Cache-Control" content="max-age=31536000">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header role="banner">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="../index.html">Mehdi<span>Masmoudi</span></a></h1>
+            </div>
+            <nav role="navigation" aria-label="Menu principal">
+                <ul id="main-menu">
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="../index.html#about">À propos</a></li>
+                    <li><a href="../index.html#skills">Compétences</a></li>
+                    <li><a href="../index.html#experience">Expérience</a></li>
+                    <li><a href="../index.html#education">Formation</a></li>
+                    <li><a href="../index.html#projects">Projets</a></li>
+                    <li><a href="../index.html#testimonials">Témoignages</a></li>
+                    <li><a href="#" class="active">Blog</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+                <div class="language-switch" role="group" aria-label="Sélection de langue">
+                    <span class="active" tabindex="0" aria-pressed="true" role="button">FR</span>
+                    <span onclick="switchLanguage('en')" tabindex="0" aria-pressed="false" role="button">EN</span>
+                </div>
+                <button class="theme-switch" aria-label="Changer de thème" tabindex="0">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+                <button class="mobile-menu" aria-label="Menu mobile" aria-expanded="false" tabindex="0">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="blog-header">
+            <div class="container">
+                <h1>Blog</h1>
+                <p>Partage de connaissances, tutoriels et réflexions sur le développement web, l'automatisation et les technologies modernes.</p>
+            </div>
+        </section>
+
+        <section class="blog-categories">
+            <div class="container">
+                <div class="categories-filter">
+                    <button class="category-btn active" data-category="all">Tous</button>
+                    <button class="category-btn" data-category="javascript">JavaScript</button>
+                    <button class="category-btn" data-category="react">React</button>
+                    <button class="category-btn" data-category="node">Node.js</button>
+                    <button class="category-btn" data-category="automation">Automation</button>
+                    <button class="category-btn" data-category="typescript">TypeScript</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-content">
+            <div class="container">
+                <div class="blog-list">
+                    <article class="blog-post" data-categories="react javascript">
+                        <div class="post-img">
+                            <img src="../images/blog-1.jpg" alt="Optimisation React" loading="lazy">
+                            <div class="post-date">
+                                <span>12</span>
+                                <span>Juin</span>
+                                <span>2024</span>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <div class="post-tags">
+                                    <span>React</span>
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="post-author">
+                                    <img src="../images/author.jpg" alt="Mehdi Masmoudi">
+                                    <span>Mehdi Masmoudi</span>
+                                </div>
+                            </div>
+                            <h2><a href="optimisation-react.html">10 Techniques pour Optimiser vos Applications React</a></h2>
+                            <p>Découvrez les meilleures pratiques pour améliorer les performances de vos applications React et offrir une expérience utilisateur fluide.</p>
+                            <div class="post-excerpt">
+                                <p>Les applications React peuvent rapidement devenir lentes si elles ne sont pas optimisées correctement. Dans cet article, nous explorerons 10 techniques essentielles pour améliorer les performances de vos applications React, de la mémoisation avec useMemo et useCallback à l'utilisation de React.lazy pour le chargement différé des composants.</p>
+                            </div>
+                            <a href="optimisation-react.html" class="btn primary-btn">Lire l'article complet</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-post" data-categories="automation">
+                        <div class="post-img">
+                            <img src="../images/blog-2.jpg" alt="Web Scraping Éthique" loading="lazy">
+                            <div class="post-date">
+                                <span>28</span>
+                                <span>Mai</span>
+                                <span>2024</span>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <div class="post-tags">
+                                    <span>Automation</span>
+                                    <span>Puppeteer</span>
+                                </div>
+                                <div class="post-author">
+                                    <img src="../images/author.jpg" alt="Mehdi Masmoudi">
+                                    <span>Mehdi Masmoudi</span>
+                                </div>
+                            </div>
+                            <h2><a href="web-scraping-ethique.html">Web Scraping Éthique : Bonnes Pratiques et Considérations Légales</a></h2>
+                            <p>Un guide complet sur la façon de collecter des données web de manière éthique et légale, en respectant les conditions d'utilisation des sites.</p>
+                            <div class="post-excerpt">
+                                <p>Le web scraping est un outil puissant pour la collecte de données, mais il doit être utilisé de manière responsable. Cet article explore les considérations éthiques et légales du web scraping, y compris le respect des robots.txt, la limitation du taux de requêtes, et les alternatives comme l'utilisation d'API officielles lorsqu'elles sont disponibles.</p>
+                            </div>
+                            <a href="web-scraping-ethique.html" class="btn primary-btn">Lire l'article complet</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-post" data-categories="typescript javascript">
+                        <div class="post-img">
+                            <img src="../images/blog-3.jpg" alt="TypeScript Avantages" loading="lazy">
+                            <div class="post-date">
+                                <span>15</span>
+                                <span>Mai</span>
+                                <span>2024</span>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <div class="post-tags">
+                                    <span>TypeScript</span>
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="post-author">
+                                    <img src="../images/author.jpg" alt="Mehdi Masmoudi">
+                                    <span>Mehdi Masmoudi</span>
+                                </div>
+                            </div>
+                            <h2><a href="typescript-avantages.html">Pourquoi Adopter TypeScript dans vos Projets JavaScript</a></h2>
+                            <p>Explorez les avantages de TypeScript pour améliorer la qualité du code, réduire les bugs et faciliter la maintenance de vos projets.</p>
+                            <div class="post-excerpt">
+                                <p>TypeScript gagne en popularité parmi les développeurs JavaScript, et pour de bonnes raisons. Cet article examine comment TypeScript peut améliorer la qualité de votre code grâce au typage statique, faciliter la refactorisation, améliorer l'expérience de développement avec l'autocomplétion, et réduire les erreurs de runtime courantes en JavaScript.</p>
+                            </div>
+                            <a href="typescript-avantages.html" class="btn primary-btn">Lire l'article complet</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-post" data-categories="node javascript">
+                        <div class="post-img">
+                            <img src="../images/blog-4.jpg" alt="API RESTful avec Node.js" loading="lazy">
+                            <div class="post-date">
+                                <span>02</span>
+                                <span>Mai</span>
+                                <span>2024</span>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <div class="post-tags">
+                                    <span>Node.js</span>
+                                    <span>API</span>
+                                </div>
+                                <div class="post-author">
+                                    <img src="../images/author.jpg" alt="Mehdi Masmoudi">
+                                    <span>Mehdi Masmoudi</span>
+                                </div>
+                            </div>
+                            <h2><a href="api-restful-nodejs.html">Créer une API RESTful Robuste avec Node.js et Express</a></h2>
+                            <p>Guide étape par étape pour concevoir et implémenter une API RESTful sécurisée et performante avec Node.js et Express.</p>
+                            <div class="post-excerpt">
+                                <p>Les API RESTful sont essentielles pour les applications web modernes. Cet article vous guide à travers la création d'une API RESTful complète avec Node.js et Express, en couvrant la structure du projet, l'authentification JWT, la validation des données, la gestion des erreurs, et les meilleures pratiques pour assurer la sécurité et la performance.</p>
+                            </div>
+                            <a href="api-restful-nodejs.html" class="btn primary-btn">Lire l'article complet</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-post" data-categories="react javascript">
+                        <div class="post-img">
+                            <img src="../images/blog-5.jpg" alt="React Hooks Avancés" loading="lazy">
+                            <div class="post-date">
+                                <span>18</span>
+                                <span>Avr</span>
+                                <span>2024</span>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <div class="post-tags">
+                                    <span>React</span>
+                                    <span>Hooks</span>
+                                </div>
+                                <div class="post-author">
+                                    <img src="../images/author.jpg" alt="Mehdi Masmoudi">
+                                    <span>Mehdi Masmoudi</span>
+                                </div>
+                            </div>
+                            <h2><a href="react-hooks-avances.html">Maîtriser les Hooks Avancés en React</a></h2>
+                            <p>Approfondissez votre compréhension des hooks React avec des techniques avancées et des patterns de conception efficaces.</p>
+                            <div class="post-excerpt">
+                                <p>Les hooks ont révolutionné la façon dont nous écrivons des composants React. Cet article va au-delà des hooks de base pour explorer des techniques avancées comme la création de hooks personnalisés, l'optimisation avec useCallback et useMemo, la gestion d'effets complexes avec useEffect, et l'implémentation de patterns comme le reducer pattern avec useReducer.</p>
+                            </div>
+                            <a href="react-hooks-avances.html" class="btn primary-btn">Lire l'article complet</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-post" data-categories="automation javascript">
+                        <div class="post-img">
+                            <img src="../images/blog-6.jpg" alt="Tests Automatisés" loading="lazy">
+                            <div class="post-date">
+                                <span>05</span>
+                                <span>Avr</span>
+                                <span>2024</span>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <div class="post-tags">
+                                    <span>Testing</span>
+                                    <span>Cypress</span>
+                                </div>
+                                <div class="post-author">
+                                    <img src="../images/author.jpg" alt="Mehdi Masmoudi">
+                                    <span>Mehdi Masmoudi</span>
+                                </div>
+                            </div>
+                            <h2><a href="tests-e2e-cypress.html">Tests End-to-End Efficaces avec Cypress.io</a></h2>
+                            <p>Apprenez à mettre en place des tests end-to-end robustes pour vos applications web avec Cypress.io.</p>
+                            <div class="post-excerpt">
+                                <p>Les tests end-to-end sont essentiels pour garantir que votre application fonctionne correctement du point de vue de l'utilisateur. Cet article explore comment utiliser Cypress.io pour créer des tests fiables et maintenables, en couvrant la configuration, les bonnes pratiques, les techniques avancées comme les commandes personnalisées, et l'intégration avec votre pipeline CI/CD.</p>
+                            </div>
+                            <a href="tests-e2e-cypress.html" class="btn primary-btn">Lire l'article complet</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="pagination">
+                    <span class="page-number active">1</span>
+                    <a href="#" class="page-number">2</a>
+                    <a href="#" class="page-number">3</a>
+                    <a href="#" class="next-page">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Abonnez-vous à ma newsletter</h2>
+                    <p>Recevez mes derniers articles, tutoriels et conseils directement dans votre boîte mail.</p>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <label for="newsletter-email" class="visually-hidden">Votre email</label>
+                            <input type="email" id="newsletter-email" placeholder="Votre adresse email" required aria-required="true">
+                            <button type="submit" class="btn primary-btn">S'abonner</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Mehdi<span>Masmoudi</span></h2>
+                    <p>Full Stack Developer | Data & Automation Specialist</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li><a href="../index.html#about">À propos</a></li>
+                        <li><a href="../index.html#skills">Compétences</a></li>
+                        <li><a href="../index.html#experience">Expérience</a></li>
+                        <li><a href="../index.html#education">Formation</a></li>
+                        <li><a href="../index.html#projects">Projets</a></li>
+                        <li><a href="../index.html#testimonials">Témoignages</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="mailto:mehdl.masmoudi.contact@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mehdi Masmoudi. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="scroll-top" aria-label="Retour en haut de page">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </a>
+
+    <script src="../js/main.js"></script>
+    <script src="blog.js"></script>
+</body>
+</html>
