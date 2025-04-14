@@ -46,7 +46,7 @@
     --bg-light: #4F5D75;
     --bg-medium: #3A4454;
     --shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    --navbar-bg: #121212; /* Fond noir pour la barre de navigation en mode sombre */
+    --navbar-bg: #1E3A5F; /* Fond bleu foncé professionnel pour la barre de navigation en mode sombre */
 }
 
 * {
@@ -196,6 +196,7 @@ header {
     z-index: 1000;
     background-color: var(--navbar-bg); /* Utilisation de la variable pour la couleur de fond */
     box-shadow: var(--shadow);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Légère bordure pour améliorer l'apparence */
     transition: var(--transition);
 }
 
@@ -226,7 +227,7 @@ header .container {
 
 /* Logo en mode sombre - plus grand avec animation */
 .logo-dark {
-    max-height: 55px; /* Logo plus grand en mode sombre */
+    max-height: 70px; /* Logo encore plus grand en mode sombre */
     width: auto;
     animation: logoAppear 0.5s ease-in-out;
 }
@@ -386,6 +387,12 @@ nav ul li a.active::after {
     font-size: 1.2rem;
     color: var(--text-color);
     transition: var(--transition);
+}
+
+/* Style spécifique pour l'icône du soleil en mode sombre */
+.dark-theme .theme-switch .fa-sun {
+    color: #FFD700; /* Couleur or pour l'icône du soleil */
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5); /* Léger halo lumineux */
 }
 
 .theme-switch:hover {
