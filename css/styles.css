@@ -192,7 +192,8 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: #f5f5f7; /* Légèrement plus foncé que le blanc pur pour améliorer le contraste */
+    background-color: #f0f0f2; /* Fond légèrement gris pour améliorer le contraste avec le logo blanc */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Ombre légère pour détacher la barre de navigation */
     box-shadow: var(--shadow);
     transition: var(--transition);
 }
