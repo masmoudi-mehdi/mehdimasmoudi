@@ -210,14 +210,21 @@ header .container {
 }
 
 .logo-image {
-    height: 35px;
+    height: 45px; /* Taille augmentée */
     width: auto;
     transition: var(--transition);
-    /* Ajouter un filtre pour améliorer la visibilité sur fond blanc */
-    filter: brightness(0.8) contrast(1.3);
-    /* Ajouter une légère bordure pour améliorer la visibilité */
-    border-radius: 4px;
     padding: 2px;
+}
+
+/* Styles spécifiques pour les différentes versions du logo */
+.logo-light, .logo-dark {
+    max-height: 45px;
+    width: auto;
+}
+
+/* Effet de survol pour les logos */
+.logo a:hover .logo-image {
+    transform: scale(1.05);
 }
 
 .logo-image:hover {

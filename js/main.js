@@ -100,10 +100,26 @@ document.addEventListener('DOMContentLoaded', function() {
                     icon.classList.remove('fa-moon');
                     icon.classList.add('fa-sun');
                     localStorage.setItem('theme', 'dark');
+
+                    // Basculer les logos pour le thème sombre
+                    document.querySelectorAll('.logo-light').forEach(logo => {
+                        logo.style.display = 'none';
+                    });
+                    document.querySelectorAll('.logo-dark').forEach(logo => {
+                        logo.style.display = 'block';
+                    });
                 } else {
                     icon.classList.remove('fa-sun');
                     icon.classList.add('fa-moon');
                     localStorage.setItem('theme', 'light');
+
+                    // Basculer les logos pour le thème clair
+                    document.querySelectorAll('.logo-light').forEach(logo => {
+                        logo.style.display = 'block';
+                    });
+                    document.querySelectorAll('.logo-dark').forEach(logo => {
+                        logo.style.display = 'none';
+                    });
                 }
             }
         });
@@ -118,6 +134,22 @@ document.addEventListener('DOMContentLoaded', function() {
             icon.classList.remove('fa-moon');
             icon.classList.add('fa-sun');
         }
+
+        // Initialiser les logos pour le thème sombre
+        document.querySelectorAll('.logo-light').forEach(logo => {
+            logo.style.display = 'none';
+        });
+        document.querySelectorAll('.logo-dark').forEach(logo => {
+            logo.style.display = 'block';
+        });
+    } else {
+        // Initialiser les logos pour le thème clair
+        document.querySelectorAll('.logo-light').forEach(logo => {
+            logo.style.display = 'block';
+        });
+        document.querySelectorAll('.logo-dark').forEach(logo => {
+            logo.style.display = 'none';
+        });
     }
 
     // Menu mobile
