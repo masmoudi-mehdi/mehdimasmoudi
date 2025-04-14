@@ -204,6 +204,21 @@ header .container {
     padding: 20px;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 50px;
+    width: auto;
+    transition: var(--transition);
+}
+
+.logo-image:hover {
+    transform: scale(1.05);
+}
+
 .logo h1 {
     font-size: 1.8rem;
     margin-bottom: 0;
@@ -492,6 +507,17 @@ nav ul li a.active::after {
 .profile-placeholder {
     font-size: 8rem;
     color: var(--bg-light);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.profile-image:hover {
+    transform: scale(1.02);
 }
 
 /* ===== ABOUT SECTION ===== */
