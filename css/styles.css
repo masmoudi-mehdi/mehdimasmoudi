@@ -205,39 +205,58 @@ header .container {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    min-height: 100px; /* Hauteur minimale pour accommoder le logo plus grand */
+    position: relative; /* Pour le positionnement absolu du logo */
 }
 
-/* Ajuster la hauteur du header en mode sombre pour le logo plus grand */
+/* Pas besoin d'ajuster la hauteur en mode sombre */
 .dark-theme header .container {
-    padding: 10px 20px;
-    min-height: 170px; /* Hauteur minimale plus grande pour le mode sombre */
+    padding: 15px 20px;
 }
 
-.logo {
+.logo-container {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    z-index: 1000;
+    width: 250px; /* Largeur fixe pour le conteneur du logo */
+    height: auto;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Fond légèrement visible */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 10px; /* Espace autour du logo */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Légère ombre */
+    transition: all 0.3s ease;
+}
+
+/* Effet de survol sur le conteneur du logo */
+.logo-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Style spécifique pour le mode sombre */
+.dark-theme .logo-container {
+    background-color: rgba(30, 58, 95, 0.8); /* Fond bleu foncé semi-transparent */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .logo-image {
-    height: 45px; /* Taille augmentée */
-    width: auto;
+    width: 100%; /* Le logo prend toute la largeur de son conteneur */
+    height: auto;
     transition: var(--transition);
-    padding: 2px;
+    max-width: 200px; /* Taille maximale pour éviter que le logo ne devienne trop grand */
 }
 
 /* Styles spécifiques pour les différentes versions du logo */
 .logo-light {
-    max-height: 80px; /* Logo beaucoup plus grand en mode clair */
-    width: auto;
+    display: block;
 }
 
-/* Logo en mode sombre - beaucoup plus grand avec animation */
+/* Logo en mode sombre avec animation */
 .logo-dark {
-    max-height: 150px; /* Logo extrêmement grand en mode sombre */
-    width: auto;
+    display: none;
     animation: logoAppear 0.5s ease-in-out;
-    margin: 10px 0; /* Ajouter plus d'espace vertical */
 }
 
 /* Animation pour l'apparition du logo en mode sombre */
@@ -278,6 +297,7 @@ header .container {
 nav {
     display: flex;
     align-items: center;
+    margin-left: 220px; /* Décaler le menu vers la droite pour laisser de la place au logo */
 }
 
 nav ul {
@@ -417,16 +437,11 @@ nav ul li a.active::after {
 
 /* ===== HERO SECTION ===== */
 .hero {
-    padding-top: 220px; /* Augmenter le padding-top pour éviter que le contenu ne soit caché sous la barre de navigation */
+    padding-top: 150px; /* Padding réduit car la barre de navigation est plus petite */
     padding-bottom: 100px;
     background-color: var(--primary-color);
     position: relative;
     overflow: hidden;
-}
-
-/* Ajuster le padding en mode sombre */
-.dark-theme .hero {
-    padding-top: 280px; /* Padding encore plus grand en mode sombre */
 }
 
 .hero::before {
