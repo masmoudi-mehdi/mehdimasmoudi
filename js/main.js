@@ -8,19 +8,25 @@ function switchLanguage(lang) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Vérifier la langue préférée
+    // Vérifier la langue préférée uniquement pour les pages d'index
     const savedLanguage = localStorage.getItem('language');
     if (savedLanguage) {
         const currentPage = window.location.pathname.split('/').pop();
-        const shouldBeOnEnglish = savedLanguage === 'en' && currentPage !== 'index_en.html';
-        const shouldBeOnFrench = savedLanguage === 'fr' && currentPage !== 'index.html';
 
-        if (shouldBeOnEnglish) {
-            window.location.href = 'index_en.html';
-            return; // Arrêter l'exécution car la page va être rechargée
-        } else if (shouldBeOnFrench) {
-            window.location.href = 'index.html';
-            return; // Arrêter l'exécution car la page va être rechargée
+        // Vérifier si nous sommes sur une page d'index ou une page sans nom (racine du site)
+        const isIndexPage = currentPage === '' || currentPage === 'index.html' || currentPage === 'index_en.html';
+
+        if (isIndexPage) {
+            const shouldBeOnEnglish = savedLanguage === 'en' && currentPage !== 'index_en.html';
+            const shouldBeOnFrench = savedLanguage === 'fr' && currentPage !== 'index.html';
+
+            if (shouldBeOnEnglish) {
+                window.location.href = 'index_en.html';
+                return; // Arrêter l'exécution car la page va être rechargée
+            } else if (shouldBeOnFrench) {
+                window.location.href = 'index.html';
+                return; // Arrêter l'exécution car la page va être rechargée
+            }
         }
     }
 
