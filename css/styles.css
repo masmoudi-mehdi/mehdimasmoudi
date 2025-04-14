@@ -207,6 +207,11 @@ header .container {
     padding: 20px;
 }
 
+/* Ajuster la hauteur du header en mode sombre pour le logo plus grand */
+.dark-theme header .container {
+    padding: 10px 20px;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -225,11 +230,12 @@ header .container {
     width: auto;
 }
 
-/* Logo en mode sombre - plus grand avec animation */
+/* Logo en mode sombre - beaucoup plus grand avec animation */
 .logo-dark {
-    max-height: 70px; /* Logo encore plus grand en mode sombre */
+    max-height: 100px; /* Logo beaucoup plus grand en mode sombre */
     width: auto;
     animation: logoAppear 0.5s ease-in-out;
+    margin: 5px 0; /* Ajouter un peu d'espace vertical */
 }
 
 /* Animation pour l'apparition du logo en mode sombre */
