@@ -101,12 +101,17 @@ document.addEventListener('DOMContentLoaded', function() {
                     icon.classList.add('fa-sun');
                     localStorage.setItem('theme', 'dark');
 
-                    // Basculer les logos pour le thème sombre (logo vert)
+                    // Basculer les logos pour le thème sombre (logo noir)
                     document.querySelectorAll('.logo-light').forEach(logo => {
                         logo.style.display = 'none';
                     });
                     document.querySelectorAll('.logo-dark').forEach(logo => {
                         logo.style.display = 'block';
+                        // Réinitialiser l'animation à chaque changement de thème
+                        logo.style.animation = 'none';
+                        setTimeout(() => {
+                            logo.style.animation = 'logoAppear 0.5s ease-in-out';
+                        }, 10);
                     });
                 } else {
                     icon.classList.remove('fa-sun');
@@ -135,12 +140,14 @@ document.addEventListener('DOMContentLoaded', function() {
             icon.classList.add('fa-sun');
         }
 
-        // Initialiser les logos pour le thème sombre (logo vert)
+        // Initialiser les logos pour le thème sombre (logo noir)
         document.querySelectorAll('.logo-light').forEach(logo => {
             logo.style.display = 'none';
         });
         document.querySelectorAll('.logo-dark').forEach(logo => {
             logo.style.display = 'block';
+            // Appliquer l'animation au chargement initial
+            logo.style.animation = 'logoAppear 0.5s ease-in-out';
         });
     } else {
         // Initialiser les logos pour le thème clair (logo blanc)
