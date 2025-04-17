@@ -22,31 +22,54 @@
   border: 0;
 }
 
+/* Lien d'évitement pour l'accessibilité */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent-color);
+  color: white;
+  padding: 8px;
+  z-index: 9999;
+  transition: top 0.3s ease;
+  border-radius: 0 0 4px 0;
+  font-weight: bold;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-decoration: underline;
+}
+
 :root {
   --primary-color: #e6e6e6;
   --secondary-color: #2d3142;
-  --accent-color: #3f88c5;
-  --text-color: #2d3142;
-  --text-light: #4f5d75;
+  --accent-color: #0066cc; /* Bleu plus foncé pour un meilleur contraste */
+  --text-color: #2d3142; /* Bleu foncé/gris pour le texte principal */
+  --text-light: #3d4b63; /* Assombri pour un meilleur contraste sur fond clair */
   --bg-light: #ffffff;
   --bg-medium: #bfc0c0;
   --transition: all 0.3s ease;
   --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --border-radius: 8px;
   --navbar-bg: #f0f0f2; /* Fond légèrement gris pour la barre de navigation en mode clair */
+  --focus-outline: 3px solid #0066cc; /* Contour visible pour la navigation au clavier */
 }
 
 /* Dark Theme Variables */
 .dark-theme {
   --primary-color: #2d3142;
   --secondary-color: #e6e6e6;
-  --accent-color: #3f88c5;
-  --text-color: #e6e6e6;
-  --text-light: #bfc0c0;
-  --bg-light: #4f5d75;
-  --bg-medium: #3a4454;
+  --accent-color: #4a9eff; /* Bleu plus clair pour un meilleur contraste sur fond sombre */
+  --text-color: #ffffff; /* Blanc pur pour le texte principal en mode sombre */
+  --text-light: #e0e0e0; /* Gris très clair pour un meilleur contraste sur fond sombre */
+  --bg-light: #3a4454; /* Légèrement plus foncé pour améliorer le contraste */
+  --bg-medium: #2d3142;
   --shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  --navbar-bg: #1e3a5f; /* Fond bleu foncé professionnel pour la barre de navigation en mode sombre */
+  --navbar-bg: #1e2a3f; /* Fond bleu foncé professionnel pour la barre de navigation en mode sombre */
+  --focus-outline: 3px solid #4a9eff; /* Contour visible pour la navigation au clavier en mode sombre */
 }
 
 * {
@@ -93,6 +116,28 @@ a {
 
 a:hover {
   color: var(--text-color);
+}
+
+/* Styles de focus pour l'accessibilité */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+[tabindex]:focus {
+  outline: var(--focus-outline);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.25);
+  text-decoration: underline;
+}
+
+/* Style de focus spécifique pour le mode sombre */
+.dark-theme a:focus,
+.dark-theme button:focus,
+.dark-theme input:focus,
+.dark-theme textarea:focus,
+.dark-theme [tabindex]:focus {
+  outline: var(--focus-outline);
+  box-shadow: 0 0 0 3px rgba(74, 158, 255, 0.25);
 }
 
 ul {
@@ -165,6 +210,10 @@ section {
   transition: var(--transition);
   border: none;
   font-size: 1rem;
+  position: relative; /* Pour le pseudo-élément de focus */
+  /* Assurer une bonne accessibilité */
+  text-decoration: none;
+  line-height: 1.5;
 }
 
 .primary-btn {
@@ -979,6 +1028,13 @@ nav ul li a.active::after {
 
 .form-group {
   margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text-color);
 }
 
 .form-group input,

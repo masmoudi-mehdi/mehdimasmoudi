@@ -119,6 +119,8 @@
     </noscript>
   </head>
   <body>
+    <!-- Lien d'évitement pour l'accessibilité -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
     <header role="banner">
       <div class="container">
         <div class="logo logo-container">
@@ -181,7 +183,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section
         id="home"
         class="hero"
@@ -203,12 +205,20 @@
               <a href="#contact" class="btn primary-btn">Me contacter</a>
               <a href="#about" class="btn secondary-btn">En savoir plus</a>
             </div>
-            <div class="social-icons">
-              <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-              <a href="mailto:mehdl.masmoudi.contact@gmail.com"
-                ><i class="fas fa-envelope"></i
+            <div class="social-icons" aria-label="Réseaux sociaux">
+              <a href="#" target="_blank" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin" aria-hidden="true"></i
+              ></a>
+              <a href="#" target="_blank" aria-label="GitHub"
+                ><i class="fab fa-github" aria-hidden="true"></i
+              ></a>
+              <a href="#" target="_blank" aria-label="Twitter"
+                ><i class="fab fa-twitter" aria-hidden="true"></i
+              ></a>
+              <a
+                href="mailto:mehdl.masmoudi.contact@gmail.com"
+                aria-label="Email"
+                ><i class="fas fa-envelope" aria-hidden="true"></i
               ></a>
             </div>
           </div>
@@ -303,86 +313,94 @@
           <div class="contact-content">
             <div class="contact-info">
               <div class="contact-item">
-                <div class="contact-icon">
+                <div class="contact-icon" aria-hidden="true">
                   <i class="fas fa-envelope"></i>
                 </div>
                 <div class="contact-details">
-                  <h3>Email</h3>
-                  <p>mehdl.masmoudi.contact@gmail.com</p>
+                  <h3 id="contact-email">Email</h3>
+                  <p aria-labelledby="contact-email">
+                    mehdl.masmoudi.contact@gmail.com
+                  </p>
                 </div>
               </div>
               <div class="contact-item">
-                <div class="contact-icon">
+                <div class="contact-icon" aria-hidden="true">
                   <i class="fas fa-map-marker-alt"></i>
                 </div>
                 <div class="contact-details">
-                  <h3>Localisation</h3>
-                  <p>Disponible pour des projets à distance</p>
+                  <h3 id="contact-location">Localisation</h3>
+                  <p aria-labelledby="contact-location">
+                    Disponible pour des projets à distance
+                  </p>
                 </div>
               </div>
               <div class="contact-item">
-                <div class="contact-icon">
+                <div class="contact-icon" aria-hidden="true">
                   <i class="fas fa-globe"></i>
                 </div>
                 <div class="contact-details">
-                  <h3>Site Web</h3>
-                  <p>www.mehdl.masmoudi.com</p>
+                  <h3 id="contact-website">Site Web</h3>
+                  <p aria-labelledby="contact-website">
+                    www.mehdl.masmoudi.com
+                  </p>
                 </div>
               </div>
               <div class="contact-social">
                 <h3>Réseaux sociaux</h3>
-                <div class="social-icons">
-                  <a href="#" target="_blank"
-                    ><i class="fab fa-linkedin"></i
+                <div class="social-icons" aria-label="Réseaux sociaux">
+                  <a href="#" target="_blank" aria-label="LinkedIn"
+                    ><i class="fab fa-linkedin" aria-hidden="true"></i
                   ></a>
-                  <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                  <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                  <a href="#" target="_blank" aria-label="GitHub"
+                    ><i class="fab fa-github" aria-hidden="true"></i
+                  ></a>
+                  <a href="#" target="_blank" aria-label="Twitter"
+                    ><i class="fab fa-twitter" aria-hidden="true"></i
+                  ></a>
                 </div>
               </div>
             </div>
             <div class="contact-form">
               <form id="contactForm" aria-labelledby="contact-title">
                 <div class="form-group">
-                  <label for="name" class="visually-hidden">Votre nom</label>
+                  <label for="name">Votre nom</label>
                   <input
                     type="text"
                     id="name"
                     name="name"
-                    placeholder="Votre nom"
+                    placeholder="Entrez votre nom"
                     required
                     aria-required="true"
                   />
                 </div>
                 <div class="form-group">
-                  <label for="email" class="visually-hidden">Votre email</label>
+                  <label for="email">Votre email</label>
                   <input
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="Votre email"
+                    placeholder="Entrez votre email"
                     required
                     aria-required="true"
                   />
                 </div>
                 <div class="form-group">
-                  <label for="subject" class="visually-hidden">Sujet</label>
+                  <label for="subject">Sujet</label>
                   <input
                     type="text"
                     id="subject"
                     name="subject"
-                    placeholder="Sujet"
+                    placeholder="Entrez le sujet de votre message"
                     required
                     aria-required="true"
                   />
                 </div>
                 <div class="form-group">
-                  <label for="message" class="visually-hidden"
-                    >Votre message</label
-                  >
+                  <label for="message">Votre message</label>
                   <textarea
                     id="message"
                     name="message"
-                    placeholder="Votre message"
+                    placeholder="Entrez votre message"
                     required
                     aria-required="true"
                   ></textarea>
@@ -416,12 +434,18 @@
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
-          <div class="footer-social">
-            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="mailto:mehdl.masmoudi.contact@gmail.com"
-              ><i class="fas fa-envelope"></i
+          <div class="footer-social" aria-label="Réseaux sociaux">
+            <a href="#" target="_blank" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin" aria-hidden="true"></i
+            ></a>
+            <a href="#" target="_blank" aria-label="GitHub"
+              ><i class="fab fa-github" aria-hidden="true"></i
+            ></a>
+            <a href="#" target="_blank" aria-label="Twitter"
+              ><i class="fab fa-twitter" aria-hidden="true"></i
+            ></a>
+            <a href="mailto:mehdl.masmoudi.contact@gmail.com" aria-label="Email"
+              ><i class="fas fa-envelope" aria-hidden="true"></i
             ></a>
           </div>
         </div>
@@ -431,13 +455,17 @@
       </div>
     </footer>
 
-    <a href="#home" class="scroll-top">
-      <i class="fas fa-arrow-up"></i>
+    <a href="#home" class="scroll-top" aria-label="Retour en haut de page">
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </a>
 
     <!-- Bouton d'appel direct pour mobile -->
-    <a href="tel:+33600000000" class="call-button">
-      <i class="fas fa-phone"></i>
+    <a
+      href="tel:+33600000000"
+      class="call-button"
+      aria-label="Appeler Mehdi Masmoudi"
+    >
+      <i class="fas fa-phone" aria-hidden="true"></i>
     </a>
 
     <script src="js/main.js"></script>
