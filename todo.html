@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Améliorations pour le site web de Mehdi Masmoudi</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #2c3e50;
+      }
+
+      h1 {
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        background-color: #e8f4fc;
+        padding: 10px 15px;
+        border-left: 4px solid #3498db;
+        margin-top: 40px;
+        border-radius: 0 5px 5px 0;
+      }
+
+      h3 {
+        margin-top: 25px;
+        color: #2980b9;
+        padding-bottom: 5px;
+        border-bottom: 1px dashed #ddd;
+      }
+
+      ul {
+        padding-left: 25px;
+        list-style-type: none;
+      }
+
+      li {
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 30px;
+      }
+
+      [type="checkbox"] {
+        position: absolute;
+        left: 0;
+        top: 3px;
+        width: 18px;
+        height: 18px;
+        margin-right: 8px;
+      }
+
+      :checked + span {
+        text-decoration: line-through;
+        color: #7f8c8d;
+      }
+
+      .category {
+        margin-bottom: 50px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .priority {
+        margin-bottom: 30px;
+      }
+
+      .progress-bar {
+        height: 5px;
+        background-color: #ecf0f1;
+        margin: 15px 0;
+        border-radius: 3px;
+      }
+
+      .progress {
+        height: 100%;
+        background-color: #3498db;
+        border-radius: 3px;
+        width: 0%;
+      }
+
+      .completed-count {
+        font-size: 0.9em;
+        color: #7f8c8d;
+        font-style: italic;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 10px;
+        }
+
+        .category {
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>TODO - Améliorations pour le site web de Mehdi Masmoudi</h1>
+
+    <p>
+      Ce document liste toutes les améliorations potentielles pour le site web,
+      organisées par catégories et priorités.
+    </p>
+
+    <!-- Accessibilité -->
+    <div class="category">
+      <h2>Accessibilité (Déjà partiellement implémenté)</h2>
+      <div class="progress-bar">
+        <div class="progress" style="width: 71%"></div>
+      </div>
+      <p class="completed-count">10/14 tâches complétées</p>
+
+      <div class="priority">
+        <h3>Priorité Haute</h3>
+        <ul>
+          <li>
+            <input type="checkbox" checked /><span
+              >Améliorer le contraste des couleurs pour respecter WCAG 2.1
+              AA</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" checked /><span
+              >Ajouter des attributs ARIA aux éléments interactifs</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" checked /><span
+              >Implémenter un lien d'évitement (skip link)</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" checked /><span
+              >Ajouter des étiquettes visibles aux formulaires</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Tester le site avec un lecteur d'écran (NVDA, JAWS ou
+              VoiceOver)</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" checked /><span
+              >Vérifier l'ordre de tabulation logique sur toutes les pages</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" checked /><span
+              >Ajouter des descriptions alternatives détaillées pour toutes les
+              images complexes</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="priority">
+        <h3>Priorité Moyenne</h3>
+        <ul>
+          <li>
+            <input type="checkbox" checked /><span
+              >Implémenter des messages d'erreur accessibles pour les
+              formulaires</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" checked /><span
+              >Ajouter des attributs `aria-expanded` et `aria-controls` aux
+              menus déroulants</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Améliorer l'accessibilité des modales et popups (si ajoutés
+              ultérieurement)</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" checked /><span
+              >Vérifier que tous les textes peuvent être redimensionnés jusqu'à
+              200% sans perte de contenu</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" checked /><span
+              >Ajouter des landmarks ARIA supplémentaires pour améliorer la
+              navigation</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="priority">
+        <h3>Priorité Basse</h3>
+        <ul>
+          <li>
+            <input type="checkbox" /><span
+              >Créer une page dédiée à l'accessibilité expliquant les
+              fonctionnalités</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Implémenter des raccourcis clavier pour les fonctionnalités
+              principales</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Ajouter des transcriptions pour tout contenu audio/vidéo
+              futur</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SEO -->
+    <div class="category">
+      <h2>SEO</h2>
+      <div class="progress-bar">
+        <div class="progress" style="width: 25%"></div>
+      </div>
+      <p class="completed-count">4/16 tâches complétées</p>
+
+      <div class="priority">
+        <h3>Priorité Haute</h3>
+        <ul>
+          <li>
+            <input type="checkbox" checked /><span
+              >Optimiser les balises meta (title, description) pour toutes les
+              pages</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" checked /><span
+              >Créer un fichier sitemap.xml</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Soumettre le sitemap.xml aux moteurs de recherche (Google Search
+              Console, Bing Webmaster Tools, Yandex Webmaster)</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" checked /><span
+              >Ajouter des données structurées (Schema.org) pour le profil
+              professionnel</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Optimiser la structure des URL pour qu'elles soient
+              descriptives</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Améliorer la vitesse de chargement des pages (score PageSpeed
+              Insights)</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="priority">
+        <h3>Priorité Moyenne</h3>
+        <ul>
+          <li>
+            <input type="checkbox" /><span
+              >Implémenter une stratégie de mots-clés cohérente dans le
+              contenu</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Ajouter des balises canoniques pour éviter le contenu
+              dupliqué</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" checked /><span
+              >Créer un fichier robots.txt optimisé</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Optimiser les balises d'en-tête (h1, h2, h3) pour la hiérarchie
+              SEO</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Ajouter des liens internes pertinents entre les pages</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="priority">
+        <h3>Priorité Basse</h3>
+        <ul>
+          <li>
+            <input type="checkbox" /><span
+              >Mettre en place un blog avec du contenu régulier lié aux
+              compétences</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Implémenter des métadonnées Open Graph pour le partage sur les
+              réseaux sociaux</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Créer des pages d'atterrissage spécifiques pour différentes
+              compétences</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Performance -->
+    <div class="category">
+      <h2>Performance</h2>
+      <div class="progress-bar">
+        <div class="progress" style="width: 7%"></div>
+      </div>
+      <p class="completed-count">1/15 tâches complétées</p>
+
+      <div class="priority">
+        <h3>Priorité Haute</h3>
+        <ul>
+          <li>
+            <input type="checkbox" /><span
+              >Optimiser et compresser toutes les images (utiliser WebP avec
+              fallbacks)</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Mettre en place le lazy loading pour les images hors écran</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" checked /><span
+              >Minifier les fichiers CSS et JavaScript</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Implémenter la mise en cache du navigateur pour les ressources
+              statiques</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Réduire les requêtes HTTP en combinant les fichiers CSS/JS</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="priority">
+        <h3>Priorité Moyenne</h3>
+        <ul>
+          <li>
+            <input type="checkbox" /><span
+              >Utiliser un CDN pour les ressources statiques</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Implémenter le chargement différé (defer) pour les scripts non
+              critiques</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Optimiser les polices web (subset, preload, display swap)</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Réduire le DOM et la complexité CSS</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Mettre en place la compression GZIP/Brotli sur le serveur</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="priority">
+        <h3>Priorité Basse</h3>
+        <ul>
+          <li>
+            <input type="checkbox" /><span
+              >Implémenter le service worker pour le fonctionnement hors
+              ligne</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Utiliser l'API Intersection Observer pour les animations au
+              défilement</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Optimiser les animations CSS pour les performances</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Design et UX -->
+    <div class="category">
+      <h2>Design et UX</h2>
+      <div class="progress-bar">
+        <div class="progress" style="width: 13%"></div>
+      </div>
+      <p class="completed-count">2/15 tâches complétées</p>
+
+      <div class="priority">
+        <h3>Priorité Haute</h3>
+        <ul>
+          <li>
+            <input type="checkbox" checked /><span
+              >Améliorer la cohérence visuelle entre toutes les pages</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Optimiser davantage l'expérience mobile (taille des boutons,
+              espacement)</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" checked /><span
+              >Ajouter des micro-interactions pour améliorer l'engagement</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Améliorer les transitions entre les pages</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Créer une version plus élaborée du mode sombre</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="priority">
+        <h3>Priorité Moyenne</h3>
+        <ul>
+          <li>
+            <input type="checkbox" /><span
+              >Ajouter des animations subtiles pour les éléments
+              interactifs</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Améliorer la présentation des projets dans le portfolio</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Créer des illustrations personnalisées pour représenter les
+              compétences</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Implémenter un système de grille plus cohérent</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Améliorer la typographie (hiérarchie, espacement,
+              lisibilité)</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="priority">
+        <h3>Priorité Basse</h3>
+        <ul>
+          <li>
+            <input type="checkbox" /><span
+              >Créer un guide de style pour maintenir la cohérence</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Ajouter des effets de parallaxe subtils</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Implémenter un système de thèmes personnalisables</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Fonctionnalités -->
+    <div class="category">
+      <h2>Fonctionnalités</h2>
+      <div class="progress-bar">
+        <div class="progress" style="width: 0%"></div>
+      </div>
+      <p class="completed-count">0/20 tâches complétées</p>
+
+      <div class="priority">
+        <h3>Priorité Haute</h3>
+        <ul>
+          <li>
+            <input type="checkbox" /><span
+              >Implémenter un formulaire de contact fonctionnel avec
+              validation</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Créer une galerie de projets interactive avec filtrage</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Ajouter une section témoignages avec carrousel</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Implémenter un système de navigation amélioré pour le
+              portfolio</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Ajouter des cas d'études détaillés pour les projets
+              principaux</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="priority">
+        <h3>Priorité Moyenne</h3>
+        <ul>
+          <li>
+            <input type="checkbox" /><span
+              >Créer un système de blog complet avec catégories et tags</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Ajouter une fonctionnalité de recherche sur le site</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Implémenter un système de newsletter</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Ajouter des boutons de partage sur les réseaux sociaux</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Créer une timeline interactive pour l'expérience
+              professionnelle</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="priority">
+        <h3>Priorité Basse</h3>
+        <ul>
+          <li>
+            <input type="checkbox" /><span
+              >Implémenter un chatbot pour les demandes initiales</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Ajouter une section FAQ interactive</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Créer un espace client/projet pour les collaborations</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Implémenter un système de commentaires pour le blog</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Multilinguisme -->
+    <div class="category">
+      <h2>Multilinguisme</h2>
+      <div class="progress-bar">
+        <div class="progress" style="width: 0%"></div>
+      </div>
+      <p class="completed-count">0/12 tâches complétées</p>
+
+      <div class="priority">
+        <h3>Priorité Haute</h3>
+        <ul>
+          <li>
+            <input type="checkbox" /><span
+              >Compléter la version anglaise de toutes les pages</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Assurer la cohérence des traductions sur l'ensemble du site</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Améliorer le sélecteur de langue avec des drapeaux et noms de
+              langues</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Implémenter des URL spécifiques à la langue (/fr/, /en/)</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="priority">
+        <h3>Priorité Moyenne</h3>
+        <ul>
+          <li>
+            <input type="checkbox" /><span
+              >Ajouter une troisième langue (arabe) si pertinent</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Créer un système de détection automatique de la langue du
+              navigateur</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Optimiser le SEO multilingue avec les balises hreflang</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Adapter le contenu aux spécificités culturelles de chaque
+              langue</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="priority">
+        <h3>Priorité Basse</h3>
+        <ul>
+          <li>
+            <input type="checkbox" /><span
+              >Permettre la traduction du blog dans toutes les langues</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Créer un glossaire technique multilingue</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Sécurité et Maintenance -->
+    <div class="category">
+      <h2>Sécurité et Maintenance</h2>
+      <div class="progress-bar">
+        <div class="progress" style="width: 0%"></div>
+      </div>
+      <p class="completed-count">0/12 tâches complétées</p>
+
+      <div class="priority">
+        <h3>Priorité Haute</h3>
+        <ul>
+          <li>
+            <input type="checkbox" /><span
+              >Mettre en place HTTPS avec HSTS</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Implémenter des protections contre le spam pour les
+              formulaires</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Créer une stratégie de sauvegarde régulière</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Mettre en place des en-têtes de sécurité (CSP, X-XSS-Protection,
+              etc.)</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="priority">
+        <h3>Priorité Moyenne</h3>
+        <ul>
+          <li>
+            <input type="checkbox" /><span
+              >Implémenter un système de journalisation des erreurs</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Créer un plan de maintenance régulière</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Mettre en place des tests automatisés pour les fonctionnalités
+              critiques</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Vérifier régulièrement les liens brisés</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="priority">
+        <h3>Priorité Basse</h3>
+        <ul>
+          <li>
+            <input type="checkbox" /><span
+              >Créer une documentation technique du site</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Mettre en place un système de déploiement automatisé</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Implémenter une surveillance des performances</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Intégrations -->
+    <div class="category">
+      <h2>Intégrations</h2>
+      <div class="progress-bar">
+        <div class="progress" style="width: 0%"></div>
+      </div>
+      <p class="completed-count">0/9 tâches complétées</p>
+
+      <div class="priority">
+        <h3>Priorité Haute</h3>
+        <ul>
+          <li>
+            <input type="checkbox" /><span
+              >Intégrer Google Analytics ou une alternative respectueuse de la
+              vie privée</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Connecter les profils de réseaux sociaux professionnels</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Mettre en place un système CRM pour les contacts</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="priority">
+        <h3>Priorité Moyenne</h3>
+        <ul>
+          <li>
+            <input type="checkbox" /><span
+              >Intégrer un calendrier pour la prise de rendez-vous</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Ajouter des widgets de réseaux sociaux</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Implémenter des intégrations avec des plateformes de portfolio
+              (Behance, Dribbble)</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="priority">
+        <h3>Priorité Basse</h3>
+        <ul>
+          <li>
+            <input type="checkbox" /><span
+              >Intégrer des outils de collaboration (Slack, Discord)</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Ajouter des intégrations avec des plateformes de développement
+              (GitHub, GitLab)</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Tests et Validation -->
+    <div class="category">
+      <h2>Tests et Validation</h2>
+      <div class="progress-bar">
+        <div class="progress" style="width: 0%"></div>
+      </div>
+      <p class="completed-count">0/12 tâches complétées</p>
+
+      <div class="priority">
+        <h3>Priorité Haute</h3>
+        <ul>
+          <li>
+            <input type="checkbox" /><span
+              >Tester sur tous les navigateurs principaux (Chrome, Firefox,
+              Safari, Edge)</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Valider le HTML avec le validateur W3C</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Tester sur différents appareils mobiles et tablettes</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Effectuer des tests d'accessibilité complets (WAVE, axe)</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="priority">
+        <h3>Priorité Moyenne</h3>
+        <ul>
+          <li>
+            <input type="checkbox" /><span
+              >Réaliser des tests utilisateurs et recueillir des retours</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Mettre en place des tests de performance (Lighthouse,
+              WebPageTest)</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Valider le CSS avec le validateur W3C</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Effectuer des tests de compatibilité avec les lecteurs
+              d'écran</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="priority">
+        <h3>Priorité Basse</h3>
+        <ul>
+          <li>
+            <input type="checkbox" /><span
+              >Mettre en place des tests A/B pour optimiser les
+              conversions</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Créer des scénarios de test automatisés</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Effectuer des audits de sécurité réguliers</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Contenu -->
+    <div class="category">
+      <h2>Contenu</h2>
+      <div class="progress-bar">
+        <div class="progress" style="width: 0%"></div>
+      </div>
+      <p class="completed-count">0/12 tâches complétées</p>
+
+      <div class="priority">
+        <h3>Priorité Haute</h3>
+        <ul>
+          <li>
+            <input type="checkbox" /><span
+              >Améliorer les descriptions des projets avec plus de détails
+              techniques</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Ajouter des études de cas détaillées pour les projets
+              majeurs</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Créer du contenu engageant pour la page d'accueil</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Optimiser les textes pour le SEO tout en restant naturels</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="priority">
+        <h3>Priorité Moyenne</h3>
+        <ul>
+          <li>
+            <input type="checkbox" /><span
+              >Créer un calendrier éditorial pour le blog</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Ajouter des témoignages de clients/collègues</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Développer une section FAQ complète</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Créer du contenu spécifique pour chaque service/compétence</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="priority">
+        <h3>Priorité Basse</h3>
+        <ul>
+          <li>
+            <input type="checkbox" /><span
+              >Créer des infographies pour illustrer les compétences et
+              l'expérience</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Développer des ressources téléchargeables (guides,
+              templates)</span
+            >
+          </li>
+          <li>
+            <input type="checkbox" /><span
+              >Créer une section de ressources/liens utiles</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      // Script pour sauvegarder l'état des cases à cocher dans le localStorage
+      document.addEventListener("DOMContentLoaded", function () {
+        // Récupérer toutes les cases à cocher
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+        // Charger l'état sauvegardé
+        checkboxes.forEach((checkbox) => {
+          const savedState = localStorage.getItem(
+            checkbox.parentNode.textContent.trim()
+          );
+          if (savedState === "true") {
+            checkbox.checked = true;
+          }
+
+          // Écouter les changements
+          checkbox.addEventListener("change", function () {
+            localStorage.setItem(
+              this.parentNode.textContent.trim(),
+              this.checked
+            );
+            updateProgressBars();
+          });
+        });
+
+        // Mettre à jour les barres de progression
+        function updateProgressBars() {
+          document.querySelectorAll(".category").forEach((category) => {
+            const checkboxes = category.querySelectorAll(
+              'input[type="checkbox"]'
+            );
+            const checked = category.querySelectorAll(
+              'input[type="checkbox"]:checked'
+            ).length;
+            const total = checkboxes.length;
+            const progress = (checked / total) * 100;
+
+            category.querySelector(".progress").style.width = progress + "%";
+            category.querySelector(".completed-count").textContent =
+              checked + "/" + total + " tâches complétées";
+          });
+        }
+
+        // Initialiser les barres de progression
+        updateProgressBars();
+      });
+    </script>
+  </body>
+</html>

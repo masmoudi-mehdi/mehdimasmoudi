@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.mehdl.masmoudi.com/sitemap.xml
+
+# Permettre à tous les robots d'accéder à tout le contenu
+User-agent: *
+Disallow:
+
+# Instructions spécifiques pour Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Instructions spécifiques pour Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Instructions spécifiques pour Yandex
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1
+
+# Instructions spécifiques pour Baiduspider
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1

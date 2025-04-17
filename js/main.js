@@ -39,6 +39,17 @@ function switchLanguage(lang) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  // Mettre à jour les boutons de langue
+  const langButtons = document.querySelectorAll(".language-switch .lang-btn");
+  if (langButtons.length) {
+    langButtons.forEach((btn) => {
+      btn.addEventListener("click", function () {
+        const lang = this.textContent.trim().toLowerCase();
+        switchLanguage(lang === "fr" ? "fr" : "en");
+      });
+    });
+  }
+
   // Vérifier la langue préférée pour toutes les pages
   const savedLanguage = localStorage.getItem("language");
   if (savedLanguage) {
@@ -372,10 +383,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Gérer le menu déroulant sur mobile avec animations améliorées
+  // Gérer le menu déroulant sur mobile avec animations améliorées et accessibilité
   const dropdownBtns = document.querySelectorAll(".dropbtn");
   if (dropdownBtns.length) {
+    // Ajouter des IDs uniques aux menus déroulants s'ils n'en ont pas déjà
+    document.querySelectorAll(".dropdown-content").forEach((content, index) => {
+      if (!content.id) {
+        content.id = `dropdown-content-${index}`;
+      }
+    });
+
     dropdownBtns.forEach((btn) => {
+      // Trouver le contenu du menu déroulant associé
+      const dropdown = btn.parentElement;
+      const dropdownContent = dropdown.querySelector(".dropdown-content");
+
+      // Ajouter aria-controls si le contenu a un ID
+      if (dropdownContent && dropdownContent.id) {
+        btn.setAttribute("aria-controls", dropdownContent.id);
+      }
+
+      // Initialiser aria-expanded
+      btn.setAttribute("aria-expanded", "false");
+
       // Ajouter un effet de retour tactile
       btn.addEventListener(
         "touchstart",
@@ -409,32 +439,51 @@ document.addEventListener("DOMContentLoaded", function () {
             if (item !== dropdown && item.classList.contains("active")) {
               // Animer la fermeture
               const dropdownContent = item.querySelector(".dropdown-content");
+              const dropdownBtn = item.querySelector(".dropbtn");
+
               if (dropdownContent) {
                 dropdownContent.style.opacity = "0";
                 setTimeout(() => {
                   item.classList.remove("active");
+                  // Mettre à jour aria-expanded
+                  if (dropdownBtn) {
+                    dropdownBtn.setAttribute("aria-expanded", "false");
+                  }
                 }, 300);
               } else {
                 item.classList.remove("active");
+                // Mettre à jour aria-expanded
+                if (dropdownBtn) {
+                  dropdownBtn.setAttribute("aria-expanded", "false");
+                }
               }
             }
           });
 
           // Basculer l'état du dropdown actuel avec animation
-          if (dropdown.classList.contains("active")) {
+          const isExpanded = dropdown.classList.contains("active");
+
+          if (isExpanded) {
             // Animation de fermeture
             const dropdownContent = dropdown.querySelector(".dropdown-content");
             if (dropdownContent) {
               dropdownContent.style.opacity = "0";
               setTimeout(() => {
                 dropdown.classList.remove("active");
+                // Mettre à jour aria-expanded
+                btn.setAttribute("aria-expanded", "false");
               }, 300);
             } else {
               dropdown.classList.remove("active");
+              // Mettre à jour aria-expanded
+              btn.setAttribute("aria-expanded", "false");
             }
           } else {
             // Animation d'ouverture
             dropdown.classList.add("active");
+            // Mettre à jour aria-expanded
+            btn.setAttribute("aria-expanded", "true");
+
             const dropdownContent = dropdown.querySelector(".dropdown-content");
             if (dropdownContent) {
               // Réinitialiser l'opacité pour l'animation
@@ -443,6 +492,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 dropdownContent.style.opacity = "1";
               }, 10);
             }
+          }
+        }
+      });
+
+      // Ajouter la gestion du clavier pour l'accessibilité
+      btn.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          btn.click();
+        } else if (e.key === "Escape") {
+          const dropdown = btn.parentElement;
+          if (dropdown.classList.contains("active")) {
+            dropdown.classList.remove("active");
+            btn.setAttribute("aria-expanded", "false");
           }
         }
       });
@@ -659,31 +722,166 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Formulaire de contact
+  // Formulaire de contact avec validation accessible
   if (contactForm) {
+    const nameInput = contactForm.querySelector("#name");
+    const emailInput = contactForm.querySelector("#email");
+    const subjectInput = contactForm.querySelector("#subject");
+    const messageInput = contactForm.querySelector("#message");
+    const formStatus = contactForm.querySelector("#form-status");
+    const nameError = contactForm.querySelector("#name-error");
+    const emailError = contactForm.querySelector("#email-error");
+    const subjectError = contactForm.querySelector("#subject-error");
+    const messageError = contactForm.querySelector("#message-error");
+    const isEnglish = document.documentElement.lang === "en";
+
+    // Fonction pour valider un champ
+    function validateField(input, errorElement, errorMessage) {
+      if (!input.value.trim()) {
+        input.classList.add("error");
+        errorElement.textContent = errorMessage;
+        input.setAttribute("aria-invalid", "true");
+        return false;
+      } else {
+        input.classList.remove("error");
+        errorElement.textContent = "";
+        input.setAttribute("aria-invalid", "false");
+        return true;
+      }
+    }
+
+    // Fonction pour valider l'email
+    function validateEmail(input, errorElement) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!input.value.trim()) {
+        input.classList.add("error");
+        errorElement.textContent = isEnglish
+          ? "Email is required"
+          : "L'email est requis";
+        input.setAttribute("aria-invalid", "true");
+        return false;
+      } else if (!emailRegex.test(input.value.trim())) {
+        input.classList.add("error");
+        errorElement.textContent = isEnglish
+          ? "Please enter a valid email address"
+          : "Veuillez entrer une adresse email valide";
+        input.setAttribute("aria-invalid", "true");
+        return false;
+      } else {
+        input.classList.remove("error");
+        errorElement.textContent = "";
+        input.setAttribute("aria-invalid", "false");
+        return true;
+      }
+    }
+
+    // Validation en temps réel pour chaque champ
+    nameInput.addEventListener("blur", function () {
+      validateField(
+        this,
+        nameError,
+        isEnglish ? "Name is required" : "Le nom est requis"
+      );
+    });
+
+    emailInput.addEventListener("blur", function () {
+      validateEmail(this, emailError);
+    });
+
+    subjectInput.addEventListener("blur", function () {
+      validateField(
+        this,
+        subjectError,
+        isEnglish ? "Subject is required" : "Le sujet est requis"
+      );
+    });
+
+    messageInput.addEventListener("blur", function () {
+      validateField(
+        this,
+        messageError,
+        isEnglish ? "Message is required" : "Le message est requis"
+      );
+    });
+
+    // Validation à la soumission du formulaire
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      // Simuler l'envoi du formulaire
-      const submitBtn = this.querySelector('button[type="submit"]');
-      if (submitBtn) {
-        const originalText = submitBtn.textContent;
-        // Adapter le texte en fonction de la langue
-        const isEnglish = document.documentElement.lang === "en";
-        submitBtn.textContent = isEnglish ? "Sending..." : "Envoi en cours...";
-        submitBtn.disabled = true;
+      // Valider tous les champs
+      const isNameValid = validateField(
+        nameInput,
+        nameError,
+        isEnglish ? "Name is required" : "Le nom est requis"
+      );
+      const isEmailValid = validateEmail(emailInput, emailError);
+      const isSubjectValid = validateField(
+        subjectInput,
+        subjectError,
+        isEnglish ? "Subject is required" : "Le sujet est requis"
+      );
+      const isMessageValid = validateField(
+        messageInput,
+        messageError,
+        isEnglish ? "Message is required" : "Le message est requis"
+      );
 
-        // Simuler un délai d'envoi
-        setTimeout(() => {
-          // Message en fonction de la langue
-          const successMessage = isEnglish
-            ? "Your message has been sent successfully!"
-            : "Votre message a été envoyé avec succès!";
-          alert(successMessage);
-          this.reset();
-          submitBtn.textContent = originalText;
-          submitBtn.disabled = false;
-        }, 1500);
+      // Si tous les champs sont valides, soumettre le formulaire
+      if (isNameValid && isEmailValid && isSubjectValid && isMessageValid) {
+        // Simuler l'envoi du formulaire
+        const submitBtn = this.querySelector('button[type="submit"]');
+        if (submitBtn) {
+          const originalText = submitBtn.textContent;
+          submitBtn.textContent = isEnglish
+            ? "Sending..."
+            : "Envoi en cours...";
+          submitBtn.disabled = true;
+
+          // Effacer les messages d'erreur
+          formStatus.textContent = "";
+          formStatus.className = "form-status-message";
+
+          // Simuler un délai d'envoi
+          setTimeout(() => {
+            // Afficher le message de succès
+            formStatus.textContent = isEnglish
+              ? "Your message has been sent successfully!"
+              : "Votre message a été envoyé avec succès!";
+            formStatus.className = "form-status-message success";
+            formStatus.setAttribute("role", "alert");
+
+            // Réinitialiser le formulaire
+            this.reset();
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+
+            // Réinitialiser les états d'erreur
+            [nameInput, emailInput, subjectInput, messageInput].forEach(
+              (input) => {
+                input.classList.remove("error");
+                input.setAttribute("aria-invalid", "false");
+              }
+            );
+            [nameError, emailError, subjectError, messageError].forEach(
+              (error) => {
+                error.textContent = "";
+              }
+            );
+          }, 1500);
+        }
+      } else {
+        // Afficher un message d'erreur général
+        formStatus.textContent = isEnglish
+          ? "Please correct the errors in the form."
+          : "Veuillez corriger les erreurs dans le formulaire.";
+        formStatus.className = "form-status-message error";
+        formStatus.setAttribute("role", "alert");
+
+        // Mettre le focus sur le premier champ invalide
+        if (!isNameValid) nameInput.focus();
+        else if (!isEmailValid) emailInput.focus();
+        else if (!isSubjectValid) subjectInput.focus();
+        else if (!isMessageValid) messageInput.focus();
       }
     });
   }

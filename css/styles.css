@@ -80,11 +80,13 @@
 
 html {
   scroll-behavior: smooth;
+  /* Permettre au texte d'être redimensionné jusqu'à 200% */
+  font-size: 100%; /* Taille de base pour les unités rem */
 }
 
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-size: 1rem; /* Utilisation de rem au lieu de px */
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--primary-color);
@@ -398,7 +400,9 @@ nav ul li a.active::after {
   color: var(--accent-color);
 }
 
-.dropdown:hover .dropdown-content {
+/* Support pour les attributs ARIA */
+.dropdown:hover .dropdown-content,
+.dropbtn[aria-expanded="true"] + .dropdown-content {
   display: block;
   animation: fadeIn 0.3s ease;
 }
@@ -409,7 +413,8 @@ nav ul li a.active::after {
   transition: transform 0.3s ease;
 }
 
-.dropdown:hover .dropbtn i {
+.dropdown:hover .dropbtn i,
+.dropbtn[aria-expanded="true"] i {
   transform: rotate(180deg);
 }
 
@@ -434,18 +439,23 @@ nav ul li a.active::after {
   font-weight: 600;
 }
 
-.language-switch span {
+.language-switch .lang-btn {
   padding: 5px 10px;
   cursor: pointer;
   transition: var(--transition);
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
-.language-switch span.active {
+.language-switch .lang-btn.active {
   background-color: var(--accent-color);
   color: var(--bg-light);
 }
 
-.language-switch span:not(.active):hover {
+.language-switch .lang-btn:not(.active):hover {
   background-color: rgba(63, 136, 197, 0.2);
 }
 
@@ -1027,12 +1037,12 @@ nav ul li a.active::after {
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem; /* 20px en rem */
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem; /* 8px en rem */
   font-weight: 500;
   color: var(--text-color);
 }
@@ -1040,7 +1050,7 @@ nav ul li a.active::after {
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 12px 15px;
+  padding: 0.75rem 0.9375rem; /* 12px 15px en rem */
   border: 1px solid var(--bg-medium);
   border-radius: var(--border-radius);
   background-color: var(--bg-light);
@@ -1048,6 +1058,10 @@ nav ul li a.active::after {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   transition: var(--transition);
+  /* Assurer que les champs de formulaire s'adaptent à la taille du texte */
+  min-height: calc(
+    1.5em + 1.5rem + 2px
+  ); /* Hauteur minimale basée sur la taille de la ligne */
 }
 
 .form-group input:focus,
@@ -1058,8 +1072,48 @@ nav ul li a.active::after {
 }
 
 .form-group textarea {
-  min-height: 150px;
+  min-height: 9.375rem; /* 150px en rem */
   resize: vertical;
+}
+
+/* Styles pour les messages d'erreur des formulaires */
+.error-message {
+  color: #d32f2f;
+  font-size: 0.875rem;
+  margin-top: 0.3125rem; /* 5px en rem */
+  font-weight: 500;
+  min-height: 1.25rem; /* 20px en rem */
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: #d32f2f;
+  background-color: rgba(211, 47, 47, 0.05);
+}
+
+.form-group input.error:focus,
+.form-group textarea.error:focus {
+  box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.2);
+}
+
+.form-status-message {
+  padding: 0.625rem; /* 10px en rem */
+  margin-bottom: 1.25rem; /* 20px en rem */
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  min-height: 1.25rem; /* 20px en rem */
+}
+
+.form-status-message.success {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: #2e7d32;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.form-status-message.error {
+  background-color: rgba(211, 47, 47, 0.1);
+  color: #d32f2f;
+  border: 1px solid rgba(211, 47, 47, 0.3);
 }
 
 /* ===== FOOTER ===== */
@@ -1926,7 +1980,8 @@ body.menu-open {
     background-color: transparent;
   }
 
-  .dropdown.active .dropdown-content {
+  .dropdown.active .dropdown-content,
+  .dropbtn[aria-expanded="true"] + .dropdown-content {
     max-height: 300px;
     opacity: 1;
     padding: 5px 0;
@@ -1957,7 +2012,8 @@ body.menu-open {
     transition: transform 0.3s ease;
   }
 
-  .dropdown.active .dropbtn i {
+  .dropdown.active .dropbtn i,
+  .dropbtn[aria-expanded="true"] i {
     transform: rotate(180deg);
   }
 

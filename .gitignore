@@ -16,6 +16,15 @@ vendor/
 dist/
 build/
 
+# Fichiers de minification
+minify-css.js
+minify-js.js
+update-references.js
+build.js
+package.json
+package-lock.json
+README-MINIFICATION.md
+
 # Fichiers de logs
 *.log
 npm-debug.log*

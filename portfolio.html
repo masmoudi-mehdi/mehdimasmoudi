@@ -1,552 +1,966 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Mehdi Masmoudi | Full Stack Developer</title>
-    <meta name="description" content="Portfolio professionnel de Mehdi Masmoudi, Full Stack Developer et spécialiste en Data & Automation">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Portfolio de Mehdi Masmoudi | Projets et Compétences en Développement Full
+      Stack
+    </title>
+    <meta
+      name="description"
+      content="Découvrez les projets, compétences et expériences professionnelles de Mehdi Masmoudi, développeur Full Stack spécialisé en JavaScript, React et Node.js. Expertise en automatisation et traitement de données."
+    />
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon_io/site.webmanifest" />
 
     <!-- SEO Meta Tags -->
-    <meta name="keywords" content="Mehdi Masmoudi, Full Stack Developer, JavaScript, TypeScript, React, Node.js, Data, Automation, Portfolio">
-    <meta name="author" content="Mehdi Masmoudi">
-    <meta name="robots" content="index, follow">
+    <meta
+      name="keywords"
+      content="Mehdi Masmoudi, Portfolio, Projets, Compétences, Développeur Full Stack, JavaScript, TypeScript, React, Node.js, Data, Automation, Web Developer, Développeur Web, Expérience professionnelle"
+    />
+    <meta name="author" content="Mehdi Masmoudi" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="googlebot" content="index, follow" />
+    <link
+      rel="canonical"
+      href="https://www.mehdl.masmoudi.com/portfolio.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="fr"
+      href="https://www.mehdl.masmoudi.com/portfolio.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://www.mehdl.masmoudi.com/portfolio_en.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://www.mehdl.masmoudi.com/portfolio.html"
+    />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.mehdl.masmoudi.com/portfolio.html">
-    <meta property="og:title" content="Portfolio - Mehdi Masmoudi | Full Stack Developer">
-    <meta property="og:description" content="Portfolio professionnel de Mehdi Masmoudi, Full Stack Developer et spécialiste en Data & Automation">
-    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.mehdl.masmoudi.com/portfolio.html"
+    />
+    <meta
+      property="og:title"
+      content="Portfolio de Mehdi Masmoudi | Projets et Compétences en Développement Full Stack"
+    />
+    <meta
+      property="og:description"
+      content="Découvrez les projets, compétences et expériences professionnelles de Mehdi Masmoudi, développeur Full Stack spécialisé en JavaScript, React et Node.js. Expertise en automatisation et traitement de données."
+    />
+    <meta property="og:image" content="images/og-image.jpg" />
+    <meta property="og:site_name" content="Mehdi Masmoudi" />
+    <meta property="og:locale" content="fr_FR" />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.mehdl.masmoudi.com/portfolio.html">
-    <meta property="twitter:title" content="Portfolio - Mehdi Masmoudi | Full Stack Developer">
-    <meta property="twitter:description" content="Portfolio professionnel de Mehdi Masmoudi, Full Stack Developer et spécialiste en Data & Automation">
-    <meta property="twitter:image" content="images/og-image.jpg">
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://www.mehdl.masmoudi.com/portfolio.html"
+    />
+    <meta
+      property="twitter:title"
+      content="Portfolio de Mehdi Masmoudi | Projets et Compétences en Développement Full Stack"
+    />
+    <meta
+      property="twitter:description"
+      content="Découvrez les projets, compétences et expériences professionnelles de Mehdi Masmoudi, développeur Full Stack spécialisé en JavaScript, React et Node.js."
+    />
+    <meta property="twitter:image" content="images/og-image.jpg" />
+    <meta property="twitter:creator" content="@MehdiMasmoudi" />
 
     <!-- Cache Control -->
-    <meta http-equiv="Cache-Control" content="max-age=31536000">
+    <meta http-equiv="Cache-Control" content="max-age=31536000" />
 
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX");
     </script>
 
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/portfolio.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/portfolio.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      media="print"
+      onload="this.media='all'"
+      crossorigin="anonymous"
+    />
+    <!-- Fallback pour les navigateurs qui ne supportent pas onload -->
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous"
+      />
+    </noscript>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <!-- Fallback pour les navigateurs qui ne supportent pas onload -->
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+  </head>
+  <body>
+    <!-- Lien d'évitement pour l'accessibilité -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
     <header role="banner">
-        <div class="container">
-            <div class="logo logo-container">
-                <a href="index.html">
-                    <img src="images/logo_blanc.webp" alt="Mehdi Masmoudi Logo" class="logo-image logo-light">
-                    <img src="images/dark_logo.webp" alt="Mehdi Masmoudi Logo" class="logo-image logo-dark" style="display: none;">
-                </a>
-            </div>
-            <nav role="navigation" aria-label="Menu principal">
-                <ul id="main-menu">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="index.html#about">À propos</a></li>
-                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
-                    <li><a href="blog/index.html">Blog</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                </ul>
-                <div class="language-switch" role="group" aria-label="Sélection de langue">
-                    <span class="active" tabindex="0" aria-pressed="true" role="button">FR</span>
-                    <span onclick="switchLanguage('en')" tabindex="0" aria-pressed="false" role="button">EN</span>
-                </div>
-                <button class="theme-switch" aria-label="Changer de thème" tabindex="0">
-                    <i class="fas fa-moon" aria-hidden="true"></i>
-                </button>
-                <button class="mobile-menu" aria-label="Menu mobile" aria-expanded="false" tabindex="0">
-                    <i class="fas fa-bars" aria-hidden="true"></i>
-                </button>
-            </nav>
+      <div class="container">
+        <div class="logo logo-container">
+          <a href="index.html">
+            <img
+              src="images/logo_blanc.webp"
+              alt="Mehdi Masmoudi Logo"
+              class="logo-image logo-light"
+              loading="eager"
+            />
+            <img
+              src="images/dark_logo.webp"
+              alt="Mehdi Masmoudi Logo"
+              class="logo-image logo-dark"
+              style="display: none"
+              loading="eager"
+            />
+          </a>
         </div>
+        <nav role="navigation" aria-label="Menu principal">
+          <ul id="main-menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#about">À propos</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
+            <li><a href="blog/index.html">Blog</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+          <div
+            class="language-switch"
+            role="group"
+            aria-label="Sélection de langue"
+          >
+            <button
+              class="lang-btn active"
+              aria-pressed="true"
+              onclick="switchLanguage('fr')"
+            >
+              FR
+            </button>
+            <button
+              class="lang-btn"
+              aria-pressed="false"
+              onclick="switchLanguage('en')"
+            >
+              EN
+            </button>
+          </div>
+          <button
+            class="theme-switch"
+            aria-label="Changer de thème"
+            tabindex="0"
+          >
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </button>
+          <button
+            class="mobile-menu"
+            aria-label="Menu mobile"
+            aria-expanded="false"
+            aria-controls="main-menu"
+            tabindex="0"
+          >
+            <i class="fas fa-bars" aria-hidden="true"></i>
+          </button>
+        </nav>
+      </div>
     </header>
 
-    <main>
-        <section class="portfolio-header">
-            <div class="container">
-                <h1>Mon Portfolio</h1>
-                <p>Découvrez mes compétences, expériences et projets en tant que développeur Full Stack spécialisé en JavaScript, TypeScript et technologies web modernes.</p>
+    <main id="main-content" role="main" tabindex="-1">
+      <section
+        class="portfolio-header"
+        role="region"
+        aria-label="En-tête du portfolio"
+      >
+        <div class="container">
+          <h1>Mon Portfolio</h1>
+          <p>
+            Découvrez mes compétences, expériences et projets en tant que
+            développeur Full Stack spécialisé en JavaScript, TypeScript et
+            technologies web modernes.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="portfolio-nav"
+        role="navigation"
+        aria-label="Navigation du portfolio"
+      >
+        <div class="container">
+          <ul class="portfolio-tabs">
+            <li><a href="#skills" class="active">Compétences</a></li>
+            <li><a href="#experience">Expérience</a></li>
+
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#testimonials">Témoignages</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        id="skills"
+        class="skills portfolio-section active"
+        role="region"
+        aria-labelledby="skills-title"
+      >
+        <div class="container">
+          <div class="section-header">
+            <h2 id="skills-title">Mes compétences</h2>
+            <div class="underline"></div>
+          </div>
+          <div class="skills-content">
+            <div class="skill-category">
+              <h3>Développement Full Stack</h3>
+              <div class="skills-grid">
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <h4>JavaScript</h4>
+                    <span>95%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 95%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <h4>TypeScript</h4>
+                    <span>90%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 90%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <h4>React</h4>
+                    <span>92%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 92%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <h4>Node.js</h4>
+                    <span>88%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 88%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <h4>SQL</h4>
+                    <span>85%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 85%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <h4>HTML/CSS</h4>
+                    <span>95%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 95%"></div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
+            <div class="skill-category">
+              <h3>Automatisation & Traitement de données</h3>
+              <div class="skills-grid">
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <h4>Web Scraping (Puppeteer)</h4>
+                    <span>90%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 90%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <h4>Prétraitement de données</h4>
+                    <span>85%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 85%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <h4>Automatisation de flux</h4>
+                    <span>88%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 88%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <h4>Power BI</h4>
+                    <span>80%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 80%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Tests & Fiabilité</h3>
+              <div class="skills-grid">
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <h4>Cypress.io</h4>
+                    <span>85%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 85%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <h4>Tests automatisés</h4>
+                    <span>90%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 90%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section class="portfolio-nav">
-            <div class="container">
-                <ul class="portfolio-tabs">
-                    <li><a href="#skills" class="active">Compétences</a></li>
-                    <li><a href="#experience">Expérience</a></li>
-
-                    <li><a href="#projects">Projets</a></li>
-                    <li><a href="#testimonials">Témoignages</a></li>
+      <section
+        id="experience"
+        class="experience portfolio-section"
+        role="region"
+        aria-labelledby="experience-title"
+      >
+        <div class="container">
+          <div class="section-header">
+            <h2 id="experience-title">Expérience professionnelle</h2>
+            <div class="underline"></div>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>Hotlas (USA, Atlanta)</h3>
+                <h4>Full Stack Developer & Data Specialist</h4>
+                <p class="timeline-date">
+                  <i class="far fa-calendar-alt"></i> 2022 - Présent
+                </p>
+                <p>
+                  Développement d'outils automatisés de web scraping et de flux
+                  de données de bout en bout, améliorant l'efficacité et la
+                  fiabilité des applications basées sur les données.
+                </p>
+                <ul class="timeline-list">
+                  <li>
+                    Conception et implémentation de solutions de scraping web
+                    robustes avec Puppeteer
+                  </li>
+                  <li>
+                    Création de pipelines de données efficaces pour le
+                    traitement et l'analyse
+                  </li>
+                  <li>
+                    Développement d'interfaces utilisateur intuitives pour
+                    visualiser les données
+                  </li>
                 </ul>
+              </div>
             </div>
-        </section>
-
-        <section id="skills" class="skills portfolio-section active" role="region" aria-labelledby="skills-title">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="skills-title">Mes compétences</h2>
-                    <div class="underline"></div>
-                </div>
-                <div class="skills-content">
-                    <div class="skill-category">
-                        <h3>Développement Full Stack</h3>
-                        <div class="skills-grid">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <h4>JavaScript</h4>
-                                    <span>95%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 95%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <h4>TypeScript</h4>
-                                    <span>90%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 90%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <h4>React</h4>
-                                    <span>92%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 92%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <h4>Node.js</h4>
-                                    <span>88%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 88%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <h4>SQL</h4>
-                                    <span>85%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 85%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <h4>HTML/CSS</h4>
-                                    <span>95%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 95%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Automatisation & Traitement de données</h3>
-                        <div class="skills-grid">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <h4>Web Scraping (Puppeteer)</h4>
-                                    <span>90%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 90%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <h4>Prétraitement de données</h4>
-                                    <span>85%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 85%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <h4>Automatisation de flux</h4>
-                                    <span>88%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 88%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <h4>Power BI</h4>
-                                    <span>80%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 80%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Tests & Fiabilité</h3>
-                        <div class="skills-grid">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <h4>Cypress.io</h4>
-                                    <span>85%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 85%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <h4>Tests automatisés</h4>
-                                    <span>90%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 90%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>SOOIN (Tunis)</h3>
+                <h4>Full Stack Developer & Product Owner</h4>
+                <p class="timeline-date">
+                  <i class="far fa-calendar-alt"></i> 2020 - 2022
+                </p>
+                <p>
+                  Responsable du développement full stack et de la gestion des
+                  produits, supervisant les intégrations API et les modules de
+                  paiement pour les plateformes clients.
+                </p>
+                <ul class="timeline-list">
+                  <li>
+                    Gestion des intégrations API complexes pour diverses
+                    plateformes
+                  </li>
+                  <li>
+                    Développement et maintenance de modules de paiement
+                    sécurisés
+                  </li>
+                  <li>
+                    Coordination entre les équipes techniques et les clients
+                    pour assurer la satisfaction
+                  </li>
+                </ul>
+              </div>
             </div>
-        </section>
-
-        <section id="experience" class="experience portfolio-section" role="region" aria-labelledby="experience-title">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="experience-title">Expérience professionnelle</h2>
-                    <div class="underline"></div>
-                </div>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Hotlas (USA, Atlanta)</h3>
-                            <h4>Full Stack Developer & Data Specialist</h4>
-                            <p class="timeline-date"><i class="far fa-calendar-alt"></i> 2022 - Présent</p>
-                            <p>Développement d'outils automatisés de web scraping et de flux de données de bout en bout, améliorant l'efficacité et la fiabilité des applications basées sur les données.</p>
-                            <ul class="timeline-list">
-                                <li>Conception et implémentation de solutions de scraping web robustes avec Puppeteer</li>
-                                <li>Création de pipelines de données efficaces pour le traitement et l'analyse</li>
-                                <li>Développement d'interfaces utilisateur intuitives pour visualiser les données</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>SOOIN (Tunis)</h3>
-                            <h4>Full Stack Developer & Product Owner</h4>
-                            <p class="timeline-date"><i class="far fa-calendar-alt"></i> 2020 - 2022</p>
-                            <p>Responsable du développement full stack et de la gestion des produits, supervisant les intégrations API et les modules de paiement pour les plateformes clients.</p>
-                            <ul class="timeline-list">
-                                <li>Gestion des intégrations API complexes pour diverses plateformes</li>
-                                <li>Développement et maintenance de modules de paiement sécurisés</li>
-                                <li>Coordination entre les équipes techniques et les clients pour assurer la satisfaction</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Five Points (Tunis)</h3>
-                            <h4>Développeur Web & Formateur</h4>
-                            <p class="timeline-date"><i class="far fa-calendar-alt"></i> 2018 - 2020</p>
-                            <p>Construction d'applications de cartographie, maintenance de plateformes e-learning, et coaching de développeurs aspirants en JavaScript, Angular et Node.js.</p>
-                            <ul class="timeline-list">
-                                <li>Développement d'applications de cartographie interactives</li>
-                                <li>Maintenance et amélioration de plateformes e-learning</li>
-                                <li>Formation de nouveaux développeurs en technologies web modernes</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Sentinel Data (Tunis)</h3>
-                            <h4>Data Engineer & Analyst</h4>
-                            <p class="timeline-date"><i class="far fa-calendar-alt"></i> 2016 - 2018</p>
-                            <p>Conception de pipelines de données, réalisation d'analyses avancées (Power BI) et garantie de l'intégrité des données pour des insights exploitables.</p>
-                            <ul class="timeline-list">
-                                <li>Conception et implémentation de pipelines de données efficaces</li>
-                                <li>Analyse avancée de données avec Power BI</li>
-                                <li>Assurance de l'intégrité et de la qualité des données</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>Five Points (Tunis)</h3>
+                <h4>Développeur Web & Formateur</h4>
+                <p class="timeline-date">
+                  <i class="far fa-calendar-alt"></i> 2018 - 2020
+                </p>
+                <p>
+                  Construction d'applications de cartographie, maintenance de
+                  plateformes e-learning, et coaching de développeurs aspirants
+                  en JavaScript, Angular et Node.js.
+                </p>
+                <ul class="timeline-list">
+                  <li>
+                    Développement d'applications de cartographie interactives
+                  </li>
+                  <li>Maintenance et amélioration de plateformes e-learning</li>
+                  <li>
+                    Formation de nouveaux développeurs en technologies web
+                    modernes
+                  </li>
+                </ul>
+              </div>
             </div>
-        </section>
-
-
-
-        <section id="projects" class="projects portfolio-section" role="region" aria-labelledby="projects-title">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="projects-title">Mes Projets</h2>
-                    <div class="underline"></div>
-                </div>
-                <div class="projects-filter">
-                    <button class="filter-btn active" data-filter="all">Tous</button>
-                    <button class="filter-btn" data-filter="web">Web</button>
-                    <button class="filter-btn" data-filter="data">Data</button>
-                    <button class="filter-btn" data-filter="automation">Automation</button>
-                </div>
-                <div class="projects-grid">
-                    <div class="project-item" data-category="web">
-                        <div class="project-img">
-                            <img src="images/project-1.jpg" alt="Projet E-commerce" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" target="_blank"><i class="fas fa-link"></i></a>
-                                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Plateforme E-commerce</h3>
-                            <p>Application web complète avec panier d'achat, paiement sécurisé et gestion des commandes.</p>
-                            <div class="project-tech">
-                                <span>React</span>
-                                <span>Node.js</span>
-                                <span>MongoDB</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-item" data-category="data">
-                        <div class="project-img">
-                            <img src="images/project-2.jpg" alt="Dashboard Analytique" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" target="_blank"><i class="fas fa-link"></i></a>
-                                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Dashboard Analytique</h3>
-                            <p>Tableau de bord interactif pour visualiser et analyser des données commerciales en temps réel.</p>
-                            <div class="project-tech">
-                                <span>D3.js</span>
-                                <span>Express</span>
-                                <span>SQL</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-item" data-category="automation">
-                        <div class="project-img">
-                            <img src="images/project-3.jpg" alt="Système d'Automatisation" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" target="_blank"><i class="fas fa-link"></i></a>
-                                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Système d'Automatisation Web</h3>
-                            <p>Outil de scraping et d'automatisation pour collecter et traiter des données à partir de diverses sources web.</p>
-                            <div class="project-tech">
-                                <span>Puppeteer</span>
-                                <span>Node.js</span>
-                                <span>AWS Lambda</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-item" data-category="web">
-                        <div class="project-img">
-                            <img src="images/project-4.jpg" alt="Application Mobile" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" target="_blank"><i class="fas fa-link"></i></a>
-                                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Application Mobile Fitness</h3>
-                            <p>Application mobile pour suivre les activités sportives, établir des objectifs et analyser les performances.</p>
-                            <div class="project-tech">
-                                <span>React Native</span>
-                                <span>Firebase</span>
-                                <span>Redux</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-item" data-category="data">
-                        <div class="project-img">
-                            <img src="images/project-5.jpg" alt="Système de Recommandation" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" target="_blank"><i class="fas fa-link"></i></a>
-                                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Système de Recommandation</h3>
-                            <p>Algorithme de recommandation basé sur le comportement des utilisateurs pour une plateforme de contenu.</p>
-                            <div class="project-tech">
-                                <span>Python</span>
-                                <span>TensorFlow</span>
-                                <span>Flask</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-item" data-category="automation">
-                        <div class="project-img">
-                            <img src="images/project-6.jpg" alt="Chatbot IA" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" target="_blank"><i class="fas fa-link"></i></a>
-                                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Chatbot IA pour Service Client</h3>
-                            <p>Chatbot intelligent capable de répondre aux questions fréquentes et de gérer les demandes de base des clients.</p>
-                            <div class="project-tech">
-                                <span>NLP</span>
-                                <span>Node.js</span>
-                                <span>DialogFlow</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>Sentinel Data (Tunis)</h3>
+                <h4>Data Engineer & Analyst</h4>
+                <p class="timeline-date">
+                  <i class="far fa-calendar-alt"></i> 2016 - 2018
+                </p>
+                <p>
+                  Conception de pipelines de données, réalisation d'analyses
+                  avancées (Power BI) et garantie de l'intégrité des données
+                  pour des insights exploitables.
+                </p>
+                <ul class="timeline-list">
+                  <li>
+                    Conception et implémentation de pipelines de données
+                    efficaces
+                  </li>
+                  <li>Analyse avancée de données avec Power BI</li>
+                  <li>Assurance de l'intégrité et de la qualité des données</li>
+                </ul>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section id="testimonials" class="testimonials portfolio-section" role="region" aria-labelledby="testimonials-title">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="testimonials-title">Témoignages</h2>
-                    <div class="underline"></div>
+      <section
+        id="projects"
+        class="projects portfolio-section"
+        role="region"
+        aria-labelledby="projects-title"
+      >
+        <div class="container">
+          <div class="section-header">
+            <h2 id="projects-title">Mes Projets</h2>
+            <div class="underline"></div>
+          </div>
+          <div class="projects-filter">
+            <button class="filter-btn active" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="data">Data</button>
+            <button class="filter-btn" data-filter="automation">
+              Automation
+            </button>
+          </div>
+          <div class="projects-grid">
+            <div class="project-item" data-category="web">
+              <div class="project-img">
+                <img
+                  src="images/project-1.jpg"
+                  alt="Interface d'une plateforme e-commerce montrant une page d'accueil avec des produits en vedette, un panier d'achat et un processus de paiement sécurisé"
+                  loading="lazy"
+                />
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="#" target="_blank"><i class="fas fa-link"></i></a>
+                    <a href="#" target="_blank"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                  </div>
                 </div>
-                <div class="testimonials-slider">
-                    <div class="testimonial-item active">
-                        <div class="testimonial-content">
-                            <div class="testimonial-text">
-                                <i class="fas fa-quote-left"></i>
-                                <p>Mehdi a transformé notre processus de collecte de données avec son système d'automatisation. Nous avons économisé des centaines d'heures de travail manuel et amélioré considérablement la précision de nos données.</p>
-                            </div>
-                            <div class="testimonial-author">
-                                <div class="author-img">
-                                    <img src="images/testimonial-1.jpg" alt="John Doe" loading="lazy">
-                                </div>
-                                <div class="author-info">
-                                    <h4>John Doe</h4>
-                                    <p>Directeur des Opérations, TechCorp</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-content">
-                            <div class="testimonial-text">
-                                <i class="fas fa-quote-left"></i>
-                                <p>La plateforme e-commerce développée par Mehdi a dépassé toutes nos attentes. L'interface utilisateur intuitive et les fonctionnalités robustes ont considérablement amélioré notre taux de conversion.</p>
-                            </div>
-                            <div class="testimonial-author">
-                                <div class="author-img">
-                                    <img src="images/testimonial-2.jpg" alt="Sarah Johnson" loading="lazy">
-                                </div>
-                                <div class="author-info">
-                                    <h4>Sarah Johnson</h4>
-                                    <p>CEO, FashionRetail</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-content">
-                            <div class="testimonial-text">
-                                <i class="fas fa-quote-left"></i>
-                                <p>Travailler avec Mehdi a été une expérience exceptionnelle. Sa compréhension approfondie des technologies web et sa capacité à résoudre des problèmes complexes ont fait de lui un atout inestimable pour notre équipe.</p>
-                            </div>
-                            <div class="testimonial-author">
-                                <div class="author-img">
-                                    <img src="images/testimonial-3.jpg" alt="Ahmed Ben Ali" loading="lazy">
-                                </div>
-                                <div class="author-info">
-                                    <h4>Ahmed Ben Ali</h4>
-                                    <p>CTO, InnovTech</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <div class="project-info">
+                <h3>Plateforme E-commerce</h3>
+                <p>
+                  Application web complète avec panier d'achat, paiement
+                  sécurisé et gestion des commandes.
+                </p>
+                <div class="project-tech">
+                  <span>React</span>
+                  <span>Node.js</span>
+                  <span>MongoDB</span>
                 </div>
-                <div class="testimonial-controls">
-                    <button class="testimonial-btn prev" aria-label="Témoignage précédent"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
-                    <div class="testimonial-dots">
-                        <span class="dot active" data-index="0" aria-label="Témoignage 1" role="button" tabindex="0"></span>
-                        <span class="dot" data-index="1" aria-label="Témoignage 2" role="button" tabindex="0"></span>
-                        <span class="dot" data-index="2" aria-label="Témoignage 3" role="button" tabindex="0"></span>
-                    </div>
-                    <button class="testimonial-btn next" aria-label="Témoignage suivant"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
-                </div>
+              </div>
             </div>
-        </section>
+            <div class="project-item" data-category="data">
+              <div class="project-img">
+                <img
+                  src="images/project-2.jpg"
+                  alt="Tableau de bord analytique avec plusieurs graphiques interactifs montrant des données commerciales en temps réel, incluant des diagrammes à barres, des courbes d'évolution et des indicateurs de performance clés"
+                  loading="lazy"
+                />
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="#" target="_blank"><i class="fas fa-link"></i></a>
+                    <a href="#" target="_blank"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>Dashboard Analytique</h3>
+                <p>
+                  Tableau de bord interactif pour visualiser et analyser des
+                  données commerciales en temps réel.
+                </p>
+                <div class="project-tech">
+                  <span>D3.js</span>
+                  <span>Express</span>
+                  <span>SQL</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-item" data-category="automation">
+              <div class="project-img">
+                <img
+                  src="images/project-3.jpg"
+                  alt="Interface d'un système d'automatisation web montrant un tableau de bord de contrôle avec des flux de travail automatisés, des statistiques de collecte de données et des paramètres de configuration pour le web scraping"
+                  loading="lazy"
+                />
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="#" target="_blank"><i class="fas fa-link"></i></a>
+                    <a href="#" target="_blank"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>Système d'Automatisation Web</h3>
+                <p>
+                  Outil de scraping et d'automatisation pour collecter et
+                  traiter des données à partir de diverses sources web.
+                </p>
+                <div class="project-tech">
+                  <span>Puppeteer</span>
+                  <span>Node.js</span>
+                  <span>AWS Lambda</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-item" data-category="web">
+              <div class="project-img">
+                <img
+                  src="images/project-4.jpg"
+                  alt="Capture d'écran d'une application mobile fitness sur smartphone montrant des fonctionnalités de suivi d'activités sportives, des graphiques de progression, et un tableau de bord personnalisé avec des objectifs d'entraînement"
+                  loading="lazy"
+                />
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="#" target="_blank"><i class="fas fa-link"></i></a>
+                    <a href="#" target="_blank"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>Application Mobile Fitness</h3>
+                <p>
+                  Application mobile pour suivre les activités sportives,
+                  établir des objectifs et analyser les performances.
+                </p>
+                <div class="project-tech">
+                  <span>React Native</span>
+                  <span>Firebase</span>
+                  <span>Redux</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-item" data-category="data">
+              <div class="project-img">
+                <img
+                  src="images/project-5.jpg"
+                  alt="Interface d'un système de recommandation montrant un algorithme qui analyse le comportement des utilisateurs, avec des visualisations de modèles de prédiction et des exemples de recommandations personnalisées pour une plateforme de contenu"
+                  loading="lazy"
+                />
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="#" target="_blank"><i class="fas fa-link"></i></a>
+                    <a href="#" target="_blank"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>Système de Recommandation</h3>
+                <p>
+                  Algorithme de recommandation basé sur le comportement des
+                  utilisateurs pour une plateforme de contenu.
+                </p>
+                <div class="project-tech">
+                  <span>Python</span>
+                  <span>TensorFlow</span>
+                  <span>Flask</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-item" data-category="automation">
+              <div class="project-img">
+                <img
+                  src="images/project-6.jpg"
+                  alt="Interface d'un chatbot IA pour service client montrant une conversation en cours, avec des bulles de dialogue, des suggestions de réponses automatiques, et un panneau d'analyse des intentions utilisateur basé sur le traitement du langage naturel"
+                  loading="lazy"
+                />
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="#" target="_blank"><i class="fas fa-link"></i></a>
+                    <a href="#" target="_blank"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>Chatbot IA pour Service Client</h3>
+                <p>
+                  Chatbot intelligent capable de répondre aux questions
+                  fréquentes et de gérer les demandes de base des clients.
+                </p>
+                <div class="project-tech">
+                  <span>NLP</span>
+                  <span>Node.js</span>
+                  <span>DialogFlow</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="testimonials"
+        class="testimonials portfolio-section"
+        role="region"
+        aria-labelledby="testimonials-title"
+      >
+        <div class="container">
+          <div class="section-header">
+            <h2 id="testimonials-title">Témoignages</h2>
+            <div class="underline"></div>
+          </div>
+          <div class="testimonials-slider">
+            <div class="testimonial-item active">
+              <div class="testimonial-content">
+                <div class="testimonial-text">
+                  <i class="fas fa-quote-left"></i>
+                  <p>
+                    Mehdi a transformé notre processus de collecte de données
+                    avec son système d'automatisation. Nous avons économisé des
+                    centaines d'heures de travail manuel et amélioré
+                    considérablement la précision de nos données.
+                  </p>
+                </div>
+                <div class="testimonial-author">
+                  <div class="author-img">
+                    <img
+                      src="images/testimonial-1.jpg"
+                      alt="Portrait professionnel de John Doe, Directeur des Opérations chez TechCorp, homme d'affaires en costume avec une expression confiante"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="author-info">
+                    <h4>John Doe</h4>
+                    <p>Directeur des Opérations, TechCorp</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-item">
+              <div class="testimonial-content">
+                <div class="testimonial-text">
+                  <i class="fas fa-quote-left"></i>
+                  <p>
+                    La plateforme e-commerce développée par Mehdi a dépassé
+                    toutes nos attentes. L'interface utilisateur intuitive et
+                    les fonctionnalités robustes ont considérablement amélioré
+                    notre taux de conversion.
+                  </p>
+                </div>
+                <div class="testimonial-author">
+                  <div class="author-img">
+                    <img
+                      src="images/testimonial-2.jpg"
+                      alt="Portrait professionnel de Sarah Johnson, CEO de FashionRetail, femme d'affaires souriante dans un environnement de bureau moderne"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="author-info">
+                    <h4>Sarah Johnson</h4>
+                    <p>CEO, FashionRetail</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-item">
+              <div class="testimonial-content">
+                <div class="testimonial-text">
+                  <i class="fas fa-quote-left"></i>
+                  <p>
+                    Travailler avec Mehdi a été une expérience exceptionnelle.
+                    Sa compréhension approfondie des technologies web et sa
+                    capacité à résoudre des problèmes complexes ont fait de lui
+                    un atout inestimable pour notre équipe.
+                  </p>
+                </div>
+                <div class="testimonial-author">
+                  <div class="author-img">
+                    <img
+                      src="images/testimonial-3.jpg"
+                      alt="Portrait professionnel d'Ahmed Ben Ali, CTO d'InnovTech, homme portant des lunettes avec une expression réfléchie dans un environnement technologique"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="author-info">
+                    <h4>Ahmed Ben Ali</h4>
+                    <p>CTO, InnovTech</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-controls">
+            <button
+              class="testimonial-btn prev"
+              aria-label="Témoignage précédent"
+            >
+              <i class="fas fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <div class="testimonial-dots">
+              <span
+                class="dot active"
+                data-index="0"
+                aria-label="Témoignage 1"
+                role="button"
+                tabindex="0"
+              ></span>
+              <span
+                class="dot"
+                data-index="1"
+                aria-label="Témoignage 2"
+                role="button"
+                tabindex="0"
+              ></span>
+              <span
+                class="dot"
+                data-index="2"
+                aria-label="Témoignage 3"
+                role="button"
+                tabindex="0"
+              ></span>
+            </div>
+            <button
+              class="testimonial-btn next"
+              aria-label="Témoignage suivant"
+            >
+              <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer role="contentinfo">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h2>Mehdi<span>Masmoudi</span></h2>
-                    <p>Full Stack Developer | Data & Automation Specialist</p>
-                </div>
-                <div class="footer-links">
-                    <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="index.html#about">À propos</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="blog/index.html">Blog</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="mailto:mehdl.masmoudi.contact@gmail.com"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Mehdi Masmoudi. Tous droits réservés.</p>
-            </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h2>Mehdi<span>Masmoudi</span></h2>
+            <p>Full Stack Developer | Data & Automation Specialist</p>
+          </div>
+          <div class="footer-links">
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="index.html#about">À propos</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="blog/index.html">Blog</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="mailto:mehdl.masmoudi.contact@gmail.com"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Mehdi Masmoudi. Tous droits réservés.</p>
+        </div>
+      </div>
     </footer>
 
     <a href="#" class="scroll-top" aria-label="Retour en haut de page">
-        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </a>
 
     <script src="js/main.js"></script>
     <script src="js/portfolio.js"></script>
-</body>
+
+    <!-- Schema.org structured data for ProfilePage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "mainEntity": {
+          "@type": "Person",
+          "name": "Mehdi Masmoudi",
+          "url": "https://www.mehdl.masmoudi.com/",
+          "image": "https://www.mehdl.masmoudi.com/images/mehdi.webp",
+          "jobTitle": "Full Stack Developer & Data Specialist"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Portfolio professionnel",
+          "description": "Compétences, expériences et projets de Mehdi Masmoudi, développeur Full Stack spécialisé en JavaScript, React et Node.js."
+        },
+        "specialty": [
+          "JavaScript",
+          "TypeScript",
+          "React",
+          "Node.js",
+          "Web Development",
+          "Data Automation",
+          "Web Scraping"
+        ]
+      }
+    </script>
+
+    <!-- Schema.org structured data for ItemList (Projects) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "Plateforme E-commerce",
+              "applicationCategory": "WebApplication",
+              "operatingSystem": "Web",
+              "description": "Application web complète avec panier d'achat, paiement sécurisé et gestion des commandes.",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "EUR"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "Dashboard Analytique",
+              "applicationCategory": "BusinessApplication",
+              "operatingSystem": "Web",
+              "description": "Tableau de bord interactif pour visualiser et analyser des données commerciales en temps réel.",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "EUR"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "Système d'Automatisation Web",
+              "applicationCategory": "DeveloperApplication",
+              "operatingSystem": "Web",
+              "description": "Outil de scraping et d'automatisation pour collecter et traiter des données à partir de diverses sources web.",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "EUR"
+              }
+            }
+          }
+        ]
+      }
+    </script>
+  </body>
 </html>
