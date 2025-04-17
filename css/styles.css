@@ -393,6 +393,16 @@ nav ul li a.active::after {
     font-size: 1.2rem;
     color: var(--text-color);
     transition: var(--transition);
+    background-color: transparent; /* Couleur de fond transparente par défaut */
+    border: none; /* Pas de bordure */
+    padding: 8px; /* Ajout d'un peu de padding pour une meilleure apparence */
+    border-radius: 50%; /* Forme circulaire */
+}
+
+/* Style spécifique pour le bouton en mode sombre */
+.dark-theme .theme-switch {
+    background-color: var(--navbar-bg); /* Même couleur que la navbar en mode sombre */
+    color: var(--text-color);
 }
 
 /* Style spécifique pour l'icône du soleil en mode sombre */
