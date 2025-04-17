@@ -263,11 +263,7 @@ header .container {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-}
-
-/* Ajuster le padding en mode sombre pour accommoder le logo plus grand */
-.dark-theme header .container {
-  padding: 10px 20px;
+  height: 100px; /* Hauteur fixe pour assurer la cohérence entre les modes */
 }
 
 .logo-container {
@@ -279,7 +275,7 @@ header .container {
 }
 
 .logo-image {
-  height: 60px; /* Hauteur fixe pour le logo en mode clair */
+  height: 80px; /* Hauteur uniformisée pour correspondre au mode sombre */
   width: auto;
   transition: var(--transition);
 }
@@ -499,7 +495,7 @@ nav ul li a.active::after {
 
 /* ===== HERO SECTION ===== */
 .hero {
-  padding-top: 120px; /* Padding ajusté pour la barre de navigation normale */
+  padding-top: 140px; /* Padding augmenté pour la barre de navigation plus grande */
   padding-bottom: 100px;
   background-color: var(--primary-color);
   position: relative;
