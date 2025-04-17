@@ -1,451 +1,609 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0"
+    />
+    <meta name="theme-color" content="#3F88C5" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="format-detection" content="telephone=yes" />
     <title>Mehdi Masmoudi | Full Stack Developer</title>
-    <meta name="description" content="Professional portfolio of Mehdi Masmoudi, Full Stack Developer and Data & Automation Specialist">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <meta
+      name="description"
+      content="Professional portfolio of Mehdi Masmoudi, Full Stack Developer and Data & Automation Specialist"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      media="print"
+      onload="this.media='all'"
+      crossorigin="anonymous"
+    />
+    <!-- Fallback for browsers that don't support onload -->
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous"
+      />
+    </noscript>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <!-- Fallback for browsers that don't support onload -->
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+  </head>
+  <body>
     <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Mehdi<span>Masmoudi</span></h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="language-switch">
-                    <span onclick="switchLanguage('fr')">FR</span>
-                    <span class="active">EN</span>
-                </div>
-                <div class="theme-switch">
-                    <i class="fas fa-moon"></i>
-                </div>
-                <div class="mobile-menu">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </nav>
+      <div class="container">
+        <div class="logo logo-container">
+          <a href="index_en.html">
+            <img
+              src="images/logo_blanc.webp"
+              alt="Mehdi Masmoudi Logo"
+              class="logo-image logo-light"
+              loading="eager"
+            />
+            <img
+              src="images/dark_logo.webp"
+              alt="Mehdi Masmoudi Logo"
+              class="logo-image logo-dark"
+              style="display: none"
+              loading="eager"
+            />
+          </a>
         </div>
+        <nav>
+          <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blog/index.html">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="language-switch">
+            <span onclick="switchLanguage('fr')">FR</span>
+            <span class="active">EN</span>
+          </div>
+          <div class="theme-switch">
+            <i class="fas fa-moon"></i>
+          </div>
+          <div class="mobile-menu">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Hello, I am</h2>
-                <h1>Mehdi Masmoudi</h1>
-                <h3><span class="typed-text"></span><span class="cursor">&nbsp;</span></h3>
-                <p>Full Stack Developer specialized in JavaScript, TypeScript, and modern web technologies.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn primary-btn">Contact Me</a>
-                    <a href="#about" class="btn secondary-btn">Learn More</a>
-                </div>
-                <div class="social-icons">
-                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="mailto:mehdl.masmoudi.contact@gmail.com"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="image-container">
-                    <!-- Placeholder for profile image -->
-                    <div class="profile-placeholder">
-                        <i class="fas fa-user"></i>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="hero-content">
+          <h2>Hello, I am</h2>
+          <h1>Mehdi Masmoudi</h1>
+          <h3>
+            <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+          </h3>
+          <p>
+            Full Stack Developer specialized in JavaScript, TypeScript, and
+            modern web technologies.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn primary-btn">Contact Me</a>
+            <a href="#about" class="btn secondary-btn">Learn More</a>
+          </div>
+          <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="mailto:mehdl.masmoudi.contact@gmail.com"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
         </div>
+        <div class="hero-image">
+          <div class="image-container">
+            <img
+              src="images/mehdi.webp"
+              alt="Mehdi Masmoudi - Full Stack Developer"
+              class="profile-image"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>About Me</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Results-driven Full Stack Developer with a strong background in JavaScript, TypeScript, and modern web technologies. Passionate about building efficient, scalable solutions with a focus on automation, data workflows, and seamless user experiences.</p>
-                    <p>Having worked in various international environments, I am comfortable in multicultural contexts and committed to leveraging technology to solve complex challenges.</p>
-                    <div class="personal-info">
-                        <div class="info-item">
-                            <span class="info-title">Name:</span>
-                            <span class="info-value">Mehdi Masmoudi</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-title">Email:</span>
-                            <span class="info-value">mehdl.masmoudi.contact@gmail.com</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-title">Languages:</span>
-                            <span class="info-value">English, French, Arabic</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-title">Availability:</span>
-                            <span class="info-value">Available for projects</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn primary-btn">Download CV</a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <h2>About Me</h2>
+          <div class="underline"></div>
         </div>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              Results-driven Full Stack Developer with a strong background in
+              JavaScript, TypeScript, and modern web technologies. Passionate
+              about building efficient, scalable solutions with a focus on
+              automation, data workflows, and seamless user experiences.
+            </p>
+            <p>
+              Having worked in various international environments, I am
+              comfortable in multicultural contexts and committed to leveraging
+              technology to solve complex challenges.
+            </p>
+            <div class="personal-info">
+              <div class="info-item">
+                <span class="info-title">Name:</span>
+                <span class="info-value">Mehdi Masmoudi</span>
+              </div>
+              <div class="info-item">
+                <span class="info-title">Email:</span>
+                <span class="info-value">mehdl.masmoudi.contact@gmail.com</span>
+              </div>
+              <div class="info-item">
+                <span class="info-title">Languages:</span>
+                <span class="info-value">English, French, Arabic</span>
+              </div>
+              <div class="info-item">
+                <span class="info-title">Availability:</span>
+                <span class="info-value">Available for projects</span>
+              </div>
+            </div>
+            <div class="about-cta">
+              <p class="portfolio-teaser">
+                <strong
+                  >Want to know more about my skills and professional
+                  experience?</strong
+                >
+              </p>
+              <div class="about-buttons">
+                <a href="portfolio.html" class="btn primary-btn"
+                  >Explore my complete portfolio</a
+                >
+                <a href="#" class="btn secondary-btn">Download CV</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2>My Skills</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="skills-content">
-                <div class="skill-category">
-                    <h3>Full Stack Development</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h4>JavaScript</h4>
-                                <span>95%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h4>TypeScript</h4>
-                                <span>90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h4>React</h4>
-                                <span>92%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 92%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h4>Node.js</h4>
-                                <span>88%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h4>SQL</h4>
-                                <span>85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h4>HTML/CSS</h4>
-                                <span>95%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Automation & Data Processing</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h4>Web Scraping (Puppeteer)</h4>
-                                <span>90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h4>Data Preprocessing</h4>
-                                <span>85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h4>Workflow Automation</h4>
-                                <span>88%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h4>Power BI</h4>
-                                <span>80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Testing & Reliability</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h4>Cypress.io</h4>
-                                <span>85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h4>Automated Testing</h4>
-                                <span>90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <h2>My Skills</h2>
+          <div class="underline"></div>
         </div>
+        <div class="skills-content">
+          <div class="skill-category">
+            <h3>Full Stack Development</h3>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>JavaScript</h4>
+                  <span>95%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 95%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>TypeScript</h4>
+                  <span>90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>React</h4>
+                  <span>92%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 92%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>Node.js</h4>
+                  <span>88%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 88%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>SQL</h4>
+                  <span>85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>HTML/CSS</h4>
+                  <span>95%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 95%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Automation & Data Processing</h3>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>Web Scraping (Puppeteer)</h4>
+                  <span>90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>Data Preprocessing</h4>
+                  <span>85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>Workflow Automation</h4>
+                  <span>88%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 88%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>Power BI</h4>
+                  <span>80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Testing & Reliability</h3>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>Cypress.io</h4>
+                  <span>85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>Automated Testing</h4>
+                  <span>90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 90%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="experience" class="experience">
-        <div class="container">
-            <div class="section-header">
-                <h2>Professional Experience</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Hotlas (USA, Atlanta)</h3>
-                        <h4>Full Stack Developer & Data Specialist</h4>
-                        <p class="timeline-date"><i class="far fa-calendar-alt"></i> 2022 - Present</p>
-                        <p>Developed automated web scraping tools and end-to-end data workflows, enhancing efficiency and reliability for data-driven applications.</p>
-                        <ul class="timeline-list">
-                            <li>Designed and implemented robust web scraping solutions with Puppeteer</li>
-                            <li>Created efficient data pipelines for processing and analysis</li>
-                            <li>Developed intuitive user interfaces for data visualization</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>SOOIN (Tunis)</h3>
-                        <h4>Full Stack Developer & Product Owner</h4>
-                        <p class="timeline-date"><i class="far fa-calendar-alt"></i> 2020 - 2022</p>
-                        <p>Responsible for full stack development and product management, overseeing API integrations and payment modules for client platforms.</p>
-                        <ul class="timeline-list">
-                            <li>Managed complex API integrations for various platforms</li>
-                            <li>Developed and maintained secure payment modules</li>
-                            <li>Coordinated between technical teams and clients to ensure satisfaction</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Five Points (Tunis)</h3>
-                        <h4>Web Developer & Trainer</h4>
-                        <p class="timeline-date"><i class="far fa-calendar-alt"></i> 2018 - 2020</p>
-                        <p>Built mapping applications, maintained e-learning platforms, and coached aspiring developers in JavaScript, Angular, and Node.js.</p>
-                        <ul class="timeline-list">
-                            <li>Developed interactive mapping applications</li>
-                            <li>Maintained and improved e-learning platforms</li>
-                            <li>Trained new developers in modern web technologies</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Sentinel Data (Tunis)</h3>
-                        <h4>Data Engineer & Analyst</h4>
-                        <p class="timeline-date"><i class="far fa-calendar-alt"></i> 2016 - 2018</p>
-                        <p>Engineered data pipelines, performed advanced analysis (Power BI), and ensured data integrity for actionable insights.</p>
-                        <ul class="timeline-list">
-                            <li>Designed and implemented efficient data pipelines</li>
-                            <li>Performed advanced data analysis with Power BI</li>
-                            <li>Ensured data integrity and quality</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <h2>Professional Experience</h2>
+          <div class="underline"></div>
         </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Hotlas (USA, Atlanta)</h3>
+              <h4>Full Stack Developer & Data Specialist</h4>
+              <p class="timeline-date">
+                <i class="far fa-calendar-alt"></i> 2022 - Present
+              </p>
+              <p>
+                Developed automated web scraping tools and end-to-end data
+                workflows, enhancing efficiency and reliability for data-driven
+                applications.
+              </p>
+              <ul class="timeline-list">
+                <li>
+                  Designed and implemented robust web scraping solutions with
+                  Puppeteer
+                </li>
+                <li>
+                  Created efficient data pipelines for processing and analysis
+                </li>
+                <li>
+                  Developed intuitive user interfaces for data visualization
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>SOOIN (Tunis)</h3>
+              <h4>Full Stack Developer & Product Owner</h4>
+              <p class="timeline-date">
+                <i class="far fa-calendar-alt"></i> 2020 - 2022
+              </p>
+              <p>
+                Responsible for full stack development and product management,
+                overseeing API integrations and payment modules for client
+                platforms.
+              </p>
+              <ul class="timeline-list">
+                <li>Managed complex API integrations for various platforms</li>
+                <li>Developed and maintained secure payment modules</li>
+                <li>
+                  Coordinated between technical teams and clients to ensure
+                  satisfaction
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Five Points (Tunis)</h3>
+              <h4>Web Developer & Trainer</h4>
+              <p class="timeline-date">
+                <i class="far fa-calendar-alt"></i> 2018 - 2020
+              </p>
+              <p>
+                Built mapping applications, maintained e-learning platforms, and
+                coached aspiring developers in JavaScript, Angular, and Node.js.
+              </p>
+              <ul class="timeline-list">
+                <li>Developed interactive mapping applications</li>
+                <li>Maintained and improved e-learning platforms</li>
+                <li>Trained new developers in modern web technologies</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Sentinel Data (Tunis)</h3>
+              <h4>Data Engineer & Analyst</h4>
+              <p class="timeline-date">
+                <i class="far fa-calendar-alt"></i> 2016 - 2018
+              </p>
+              <p>
+                Engineered data pipelines, performed advanced analysis (Power
+                BI), and ensured data integrity for actionable insights.
+              </p>
+              <ul class="timeline-list">
+                <li>Designed and implemented efficient data pipelines</li>
+                <li>Performed advanced data analysis with Power BI</li>
+                <li>Ensured data integrity and quality</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="education" class="education">
-        <div class="container">
-            <div class="section-header">
-                <h2>Education & Continuous Learning</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="education-grid">
-                <div class="education-item">
-                    <div class="education-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <h3>Harvard University</h3>
-                    <h4>Computer Science 50 (CS50)</h4>
-                    <p>Intensive computer science training covering algorithms, data structures, web security, and application development.</p>
-                </div>
-                <div class="education-item">
-                    <div class="education-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Udemy</h3>
-                    <h4>React - The Complete Guide</h4>
-                    <p>Mastery of React.js, Redux, React Hooks, and best practices for modern web application development.</p>
-                </div>
-                <div class="education-item">
-                    <div class="education-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Five Points</h3>
-                    <h4>Full-Stack JS Certification</h4>
-                    <p>Comprehensive certification in full-stack JavaScript development, including Node.js, Express, MongoDB, and front-end frameworks.</p>
-                </div>
-                <div class="education-item">
-                    <div class="education-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Tunis Carthage University</h3>
-                    <h4>Bachelor's in Management (Finance)</h4>
-                    <p>Training in financial management, economic data analysis, and strategic decision-making.</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <h2>Education & Continuous Learning</h2>
+          <div class="underline"></div>
         </div>
+        <div class="education-grid">
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-university"></i>
+            </div>
+            <h3>Harvard University</h3>
+            <h4>Computer Science 50 (CS50)</h4>
+            <p>
+              Intensive computer science training covering algorithms, data
+              structures, web security, and application development.
+            </p>
+          </div>
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3>Udemy</h3>
+            <h4>React - The Complete Guide</h4>
+            <p>
+              Mastery of React.js, Redux, React Hooks, and best practices for
+              modern web application development.
+            </p>
+          </div>
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3>Five Points</h3>
+            <h4>Full-Stack JS Certification</h4>
+            <p>
+              Comprehensive certification in full-stack JavaScript development,
+              including Node.js, Express, MongoDB, and front-end frameworks.
+            </p>
+          </div>
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3>Tunis Carthage University</h3>
+            <h4>Bachelor's in Management (Finance)</h4>
+            <p>
+              Training in financial management, economic data analysis, and
+              strategic decision-making.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>Contact Me</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Email</h3>
-                            <p>mehdl.masmoudi.contact@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Location</h3>
-                            <p>Available for remote projects</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Website</h3>
-                            <p>www.mehdl.masmoudi.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-social">
-                        <h3>Social Media</h3>
-                        <div class="social-icons">
-                            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn primary-btn">Send Message</button>
-                    </form>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <h2>Contact Me</h2>
+          <div class="underline"></div>
         </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Email</h3>
+                <p>mehdl.masmoudi.contact@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Location</h3>
+                <p>Available for remote projects</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-globe"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Website</h3>
+                <p>www.mehdl.masmoudi.com</p>
+              </div>
+            </div>
+            <div class="contact-social">
+              <h3>Social Media</h3>
+              <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Your message"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn primary-btn">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h2>Mehdi<span>Masmoudi</span></h2>
-                    <p>Full Stack Developer | Data & Automation Specialist</p>
-                </div>
-                <div class="footer-links">
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#education">Education</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="mailto:mehdl.masmoudi.contact@gmail.com"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Mehdi Masmoudi. All rights reserved.</p>
-            </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h2>Mehdi<span>Masmoudi</span></h2>
+            <p>Full Stack Developer | Data & Automation Specialist</p>
+          </div>
+          <div class="footer-links">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="blog/index.html">Blog</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="mailto:mehdl.masmoudi.contact@gmail.com"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Mehdi Masmoudi. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
 
     <a href="#home" class="scroll-top">
-        <i class="fas fa-arrow-up"></i>
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Direct call button for mobile -->
+    <a href="tel:+33600000000" class="call-button">
+      <i class="fas fa-phone"></i>
     </a>
 
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
